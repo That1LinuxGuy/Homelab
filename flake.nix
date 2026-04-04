@@ -7,14 +7,28 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
-    # Please replace my-nixos with your hostname
-    nixosConfigurations.bulbasaur= nixpkgs.lib.nixosSystem {
-      modules = [
-        # Import the previous configuration.nix we used,
-        # so the old configuration file still takes effect
-        ./configuration.nix
-        ./modules/k3s-master.nix
-      ];
+    nixosConfigurations = {
+     # master node | pokedex 001
+     bulbasaur = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./common/default.nix
+          ./common/network.nix
+          ./hosts/bulbasaur/bulbasaur.nix
+          ./modules/k3s-master.nix # Only included here
+        ];
+      };
+
+      # server node | pokedex 003
+      squirtle = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./common/default.nix
+          ./common/network.nix
+          ./hosts/squirtle/squirtle.nix
+          ./modules/k3s-server.nix # Only included here
+        ];
+      };
     };
   };
 }
