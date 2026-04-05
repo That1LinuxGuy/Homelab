@@ -8,4 +8,10 @@
 
   networking.hostName = "charmander"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  services.openiscsi = {
+  enable = true;
+  name = "${config.networking.hostName}-charmander";
+  };
+
 }
