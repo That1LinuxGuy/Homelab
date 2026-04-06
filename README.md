@@ -14,7 +14,8 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 
 I tried to make it simple. It makes sense to me at least. Each machine is funneled into flake.nix
 
-in /hosts, I have all my machines and hardware
-in /common, I have common services, networking, and configs
-in /kubes, I have configs for all the containers I plan to run.
-in /k3s, I have the specific roles for various machines defind
+in /hosts, I have all my machines and hardware \
+in /common, I have common services, networking, and configs \
+in /kubes, I have configs for all the containers I plan to run \
+in /modules, I have the specific roles for various machines defined \
+
