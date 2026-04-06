@@ -17,5 +17,11 @@ I tried to make it simple. It makes sense to me at least. Each machine is funnel
 in /hosts, I have all my machines and hardware \
 in /common, I have common services, networking, and configs \
 in /kubes, I have configs for all the containers I plan to run \
-in /modules, I have the specific roles for various machines defined \
+in /modules, I have the specific roles for various machines defined
 
+## Issues:
+
+My biggest concern currently is hardware. In the [etcd guide](https://etcd.io/docs/v3.3/op-guide/hardware/) it specifically states "Fast disks are the most critical factor for etcd deployment performance and stability" \
+Currently, my prodesk only has an HDD that I will not be upgrading anytime soon due to PC part pricing :,(
+
+Second, Nix is weird... After learning Nix code, then adding the flake, then moving EVERYTHING into directories, I ran into a lot of syntax errors and hidden issues. One major "problem" is that the system does not tell you why things don't work. If the K3S service hangs during nixos-rebuild switch - you know the K3S service isn't working, but with no idea why. I said "problem" because this is a specific design of the system - a declarative approach means less work for the user, but also less visibility by default.
