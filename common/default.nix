@@ -33,6 +33,9 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.mcallen = {
     isNormalUser = true;
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDUxXDXdhIZx+XWSLGUDX0m2RvukURP5KE8oPLZVVq4P"
+      ];  
     description = "mcallen";
     extraGroups = [ "networkmanager" "wheel" "k3s" ];
     linger = true;

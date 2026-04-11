@@ -19,13 +19,15 @@
     };
   };
   services.tailscale.enable = true;
-  services.fail2ban.enable = true;
+  # services.fail2ban.enable = true;
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
     6443 # k3s: required so pods can reach API server
     2379 # k3s, etcd clients: required for High Availability etcd
     2380 # k3s, etcd clients: required for High Availability etcd
+    80   # Traefik ingress
+    443  # Traefik ingress
   ];
 
   networking.firewall.allowedUDPPorts = [
