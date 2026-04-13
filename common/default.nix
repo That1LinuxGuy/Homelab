@@ -73,6 +73,7 @@
     wget
     openiscsi
     git
+    fluxcd
     fastfetch
     (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
