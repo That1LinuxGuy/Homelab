@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./kubes.cluster
+  path: ./kubes/clusters
   prune: true
   sourceRef:
     kind: GitRepository
