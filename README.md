@@ -12,7 +12,7 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 
 ## Tasks
 
-- [ ] Setup FluxCD to automate deployments, monitoring, and scaling
+- [x] Setup FluxCD to automate deployments, monitoring, and scaling
 - [ ] Re-install Longhorn so Flux can manage configuration
 - [ ] Install and configure Prometheus/Grafana
 - [ ] Setup CloudNativePG for DB storage
