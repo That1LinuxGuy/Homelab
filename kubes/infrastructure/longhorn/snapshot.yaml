@@ -12,6 +12,7 @@ spec:
   concurrency: 2
   labels:
     type: daily
+  dependsOn: longhorn
 ---
 apiVersion: longhorn.io/v1beta2
 kind: RecurringJob
@@ -27,3 +28,4 @@ spec:
   concurrency: 1
   labels:
     type: weekly
+  dependsOn: longhorn
