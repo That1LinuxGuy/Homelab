@@ -47,6 +47,11 @@
     TimeoutStartSec = "30";
   };
 
+  systemd.tmpfiles.rules = [
+    # Create a symbolic link /usr/bin/mount -> /run/current-system/sw/bin/mount
+    "L /usr/bin/mount - - - - /run/current-system/sw/bin/mount"
+  ];
+
   # Enable git with global config
   programs.git = {
     enable = true;
