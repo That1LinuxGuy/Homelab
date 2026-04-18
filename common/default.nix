@@ -42,7 +42,7 @@
   users.groups.k3s = {}; # This creates the group
 
   systemd.services.iscsid.serviceConfig = {
-    PrivateMounts = "yes";
+    PrivateMounts = "no";
     BindPaths = "/run/current-system/sw/bin:/bin";
     TimeoutStartSec = "30";
   };
