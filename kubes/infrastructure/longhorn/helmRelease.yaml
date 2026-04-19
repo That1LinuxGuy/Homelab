@@ -21,12 +21,12 @@ spec:
       storageMinimalAvailablePercentage: 10
       # Automatic salvage of volumes after node failure
       autoSalvage: true
-      ingress:
-        enabled: true
-        ingressClassName: "traefik"
-        host: longhorn.home
-        path: /
-        pathType: Prefix
+#      ingress:
+#        enabled: true
+#        ingressClassName: "traefik"
+#        host: longhorn.home
+#        path: /
+#        pathType: Prefix
       persistence:
         defaultClass: true
       metrics:
