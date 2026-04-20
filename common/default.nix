@@ -80,6 +80,18 @@
     };
   };
 
+  # enable auto upgrades
+  system.autoUpgrade = {
+    enable = true;
+    flake = "/etc/nixos/";
+    flags = [
+      "--print-build-logs"
+      "--commit-lock-file"  # If you want to automatically commit the updated flake.lock
+    ];
+    dates = "weekly";
+    randomizedDelaySec = "45min";
+  };
+
   # Enable Flakes feature and accompanying CLI tools
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
