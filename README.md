@@ -17,7 +17,7 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 - [ ] Install and configure Prometheus/Grafana
 - [ ] Setup CloudNativePG for DB storage
 - [ ] Setup Bitnami Chart for Redis
-- [ ] Setup Ceph via Rook for S3 compatible storage
+- [ ] Setup Garage for S3 compatible storage
 - [ ] Install [Mijn Bureau](https://minbzk.github.io/mijn-bureau-infra/) production implementation of La Suite Numerique
 - [ ] Cry tears of joy
 
