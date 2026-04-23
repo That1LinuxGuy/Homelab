@@ -104,6 +104,7 @@
     git
     fluxcd
     fastfetch
+    yaml-language-server
     (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
           helm-secrets
