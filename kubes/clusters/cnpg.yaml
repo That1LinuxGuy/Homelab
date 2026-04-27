@@ -28,7 +28,7 @@ spec:
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment
-      name: cloudnative-pg
+      name: cnpg-contoller-manager
       namespace: cnpg-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
