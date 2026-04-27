@@ -10,7 +10,7 @@ I have a repurposed Chromebox, an HP prodesk, and an old dell latitude. They are
 
 For the OS, I wanted something I could set, forget, and easily copy to new machines when I *obviously* expand my hardware selection. Thus, NixOS was a natural choice.
 
-## Tasks
+## Tasks:
 
 - [x] Setup FluxCD to automate deployments, monitoring, and scaling
 - [x] Re-install Longhorn so Flux can manage configuration
