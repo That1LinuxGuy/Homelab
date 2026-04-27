@@ -30,7 +30,7 @@ I tried to make it simple. It makes sense to me at least. Each machine is funnel
 in /hosts, I have all my machines and hardware \
 in /common, I have common services, networking, and configs \
 in /modules, I have the specific roles for various machines defined \
-in /kubes, I have my fluxCD monorepo configs for all my container \
+in /kubes, I have my fluxCD monorepo configs for all my container
 - clusters is my fluxCD config folder
 - infrastructure holds pods required to run services
 - apps is where actual services will run
