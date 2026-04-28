@@ -14,6 +14,25 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
+  name: tailscale-secrets
+  namespace: flux-system
+spec:
+  interval: 1h
+  dependsOn:
+    - name: tailscale-namespace
+  path: ./kubes/infrastructure/secrets
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
   name: tailscale-config
   namespace: flux-system
 spec:
