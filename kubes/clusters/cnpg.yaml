@@ -25,11 +25,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-#  healthChecks:
-#    - apiVersion: apps/v1
-#      kind: Deployment
-#      name: cloudnative-pg
-#      namespace: cnpg-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
@@ -38,8 +33,8 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1h
-#  dependsOn:
-#    - name: cnpg-config
+  dependsOn:
+    - name: cnpg-namespace
   path: ./kubes/infrastructure/secrets
   prune: true
   sourceRef:
@@ -59,7 +54,6 @@ spec:
   interval: 1h
   dependsOn:
     - name: cnpg-secrets
-    - name: cnpg-config
   path: ./kubes/infrastructure/cnpg/database
   prune: true
   sourceRef:
