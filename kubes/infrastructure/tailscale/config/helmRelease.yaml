@@ -13,7 +13,7 @@ spec:
       interval: 30m
       sourceRef:
         kind: HelmRepository
-        name: tailscale-operator
+        name: tailscale
         namespace: tailscale
   values:
     operatorConfig:
