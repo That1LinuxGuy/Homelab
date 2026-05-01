@@ -23,9 +23,9 @@ spec:
     oauth:
       clientId:
         secret:
-          name: tailscale-auth
+          name: tailscale-secrets
           key: client_id
       clientSecret:
         secret:
-          name: tailscale-auth
+          name: tailscale-secrets
           key: client_secret
