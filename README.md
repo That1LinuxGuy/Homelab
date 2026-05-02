@@ -16,7 +16,9 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 - [x] Re-install Longhorn so Flux can manage configuration
 - [x] Replace servicelb with metallb
 - [x] Install tailscale kube operator
-- [ ] Install and configure Prometheus/Grafana
+- [x] Install and configure Prometheus/Grafana
+- [ ] Install cert-manager
+- [ ] Install external-dns
 - [ ] Setup CloudNativePG for DB storage
 - [ ] Setup Bitnami Chart for Redis
 - [ ] Setup Garage for S3 compatible storage

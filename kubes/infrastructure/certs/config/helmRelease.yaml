@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: networking
+spec:
+  interval: 1h
+  chart:
+    spec:
+      chart: cert-manager
+      version: "1.20.x"
+      sourceRef:
+        kind: HelmRepository
+        name: jetstack
+        namespace: flux-system
+
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+
+  promethues:
+    enabled: true
