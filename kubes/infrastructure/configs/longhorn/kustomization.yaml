@@ -6,5 +6,4 @@ resources:
   - helmRelease.yaml
   - double.yaml
   - triple.yaml
-  - ingress.yaml
   # - snapshot.yaml

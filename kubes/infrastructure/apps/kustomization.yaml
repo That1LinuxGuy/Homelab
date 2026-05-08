@@ -1,0 +1,5 @@
+resources:
+  - database
+  - longhorn
+  - grafana
+  - metal
