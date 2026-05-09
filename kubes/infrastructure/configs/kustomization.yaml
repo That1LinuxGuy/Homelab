@@ -1,5 +1,6 @@
 resources:
   - cnpg
+  - certs
 #  - garage
   - longhorn
   - metal
