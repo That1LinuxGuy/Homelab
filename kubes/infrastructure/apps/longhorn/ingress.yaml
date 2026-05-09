@@ -6,7 +6,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: longhorn
+      name: longhorn-frontend
       port:
         number: 80
   ingressClassName: tailscale
