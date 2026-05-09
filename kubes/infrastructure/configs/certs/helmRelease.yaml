@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 12h
+  chartRef:
+    kind: OCIRepository
+    name: cert-manager
+    strategy:
+      name: RetryOnFailure
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  values:
+    crds:
+      enabled: true
+      keep: true
+    replicaCount: 2
+
+  prometheus:
+    enabled: true
+    servicemonitor:
+      enabled: true
+
+  extraArgs:
+    - --dns01-recursive-nameservers-only
+    - --dns01-recursive-nameservers=8.8.8.8:53,1.1.1.1:53
