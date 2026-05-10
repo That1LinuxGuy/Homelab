@@ -7,4 +7,4 @@ resources:
   - prometheus
 #  - redis
   - tailscale
-#  - certs
+  - trust
