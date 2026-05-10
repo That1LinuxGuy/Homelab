@@ -8,8 +8,6 @@ spec:
   chartRef:
     kind: OCIRepository
     name: cert-manager
-    strategy:
-      name: RetryOnFailure
   install:
     crds: CreateReplace
   upgrade:
