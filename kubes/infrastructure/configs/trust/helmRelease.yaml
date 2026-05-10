@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: trust-manager
+  namespace: cert-manager
+spec:
+  interval: 12h
+  chart:
+    spec:
+      chart: trust-manager
+      version: "0.22.x"
+      interval: 12h
+      sourceRef:
+        kind: HelmRepository
+        name: trust-manager
+        namespace: flux-system
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  values:
+    crds:
+      enabled: true
+      keep: true
+    replicaCount: 2
+
+  prometheus:
+    enabled: true
+    servicemonitor:
+      enabled: true

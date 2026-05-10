@@ -20,12 +20,3 @@ spec:
       hostname: "homelab-tailscale-operator"
     apiServerProxyConfig:
       mode: "true"
-#    oauth:
-#      clientId:
-#        secret:
-#          name: tailscale-secrets
-#          key: client_id
-#      clientSecret:
-#        secret:
-#          name: tailscale-secrets
-#          key: client_secret
