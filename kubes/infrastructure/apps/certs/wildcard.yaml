@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: wildcard-tls-secret
   issuerRef:
-    name: letsencrypt-dns01
+    name: letsencrypt-cloudflare
     kind: ClusterIssuer
   dnsNames:
     - "*.713602.xyz"
