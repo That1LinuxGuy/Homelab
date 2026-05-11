@@ -4,16 +4,11 @@ metadata:
   name: trust-manager
   namespace: cert-manager
 spec:
-  interval: 12h
-  chart:
-    spec:
-      chart: trust-manager
-      version: "0.22.x"
-      interval: 12h
-      sourceRef:
-        kind: HelmRepository
-        name: trust-manager
-        namespace: flux-system
+  interval: 1h
+  chartRef:
+    kind: OCIRepository
+    name: trust-manager
+    namespace: flux-system
   install:
     crds: CreateReplace
   upgrade:
