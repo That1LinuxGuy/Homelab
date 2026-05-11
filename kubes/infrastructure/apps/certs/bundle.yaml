@@ -6,7 +6,7 @@ spec:
   sources:
   - useDefaultCAs: true
   - secret:
-      name: "wildcard-tls"
+      name: "wildcard-tls-secret"
       key: "ca.crt"
   target:
     configMap:
