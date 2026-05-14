@@ -35,6 +35,11 @@
     8472 # k3s, flannel: required if using multi-node for inter-node networking
     53   # DNS resolution
   ];
+  
+  networking.firewall.trustedInterfaces = [
+    tailscale0
+  ];
+
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 }
