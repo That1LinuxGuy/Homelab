@@ -14,10 +14,10 @@ secrets:
     DB_NAME: "romm"
     MYSQL_ROOT_PASSWORD: "your_root_password"
     DB_PORT: "3306"
-    ROMM_AUTH_SECRET_KEY: "sdn36hjf5oope9arkas5jcl8m7s0ez6x"
+    ROMM_AUTH_SECRET_KEY: ""
 #    IGDB_CLIENT_ID: "your_igdb_client_id"
 #    IGDB_CLIENT_SECRET: "your_igdb_client_secret"
-    STEAMGRIDDB_API_KEY: "e2de7a9fb38356d4fdf8624ac7913783"
+    STEAMGRIDDB_API_KEY: ""
 
 # Ingress configuration
 romm:
