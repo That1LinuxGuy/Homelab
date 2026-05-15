@@ -36,10 +36,6 @@
     53   # DNS resolution
   ];
   
-  networking.firewall.trustedInterfaces = [
-    tailscale0
-  ];
-
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 }
