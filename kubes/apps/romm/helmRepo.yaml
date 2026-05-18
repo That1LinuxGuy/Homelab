@@ -5,4 +5,4 @@ metadata:
   namespace: romm-app
 spec:
   interval: 1h
-  url: https://henriqzimer.github.io/helm-applications
+  url: https://henriqzimer.github.io/romm-helm-chart
