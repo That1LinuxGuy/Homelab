@@ -1,0 +1,70 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: romm
+  namespace: romm-app
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: romm
+      version: '1.0.x'
+      interval: 30m
+      sourceRef:
+        kind: HelmRepository
+        name: romm
+        namespace: romm-app
+
+  values:
+    mariadb:
+      enabled: true
+      persistence:
+        enabled: true
+        size: 1Gi
+        storageClassName: "longhorn-double"
+    
+    # Database configuration
+    secrets:
+      enabled: false
+    
+    romm:
+      envFrom:
+        -secretRef:
+          name: romm-external-secrets
+
+    # Ingress configuration
+    romm:
+      ingress:
+        enabled: true
+        hosts:
+          - host: romm.home
+            paths:
+              - path: /
+                pathType: Prefix
+    #    tls:
+    #      - secretName: romm-tls
+    #        hosts:
+    #          - romm.yourdomain.com
+    
+      # Storage configuration
+      persistence:
+        config:
+          enabled: true
+          size: 1Gi
+          storageClass: "longhorn-double"
+          existingClaim: ""
+        library:
+          enabled: true
+          size: 150Gi
+          storageClass: "longhorn-double"
+          existingClaim: ""
+        resources:
+          enabled: true
+          size: 10Gi
+          storageClass: "longhorn-double"
+          existingClaim: ""
+        assets:
+          enabled: true
+          size: 5Gi
+          storageClass: "longhorn-double"
+          existingClaim: ""

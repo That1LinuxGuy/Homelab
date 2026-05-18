@@ -7,7 +7,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`roms.eaglhandlaundry.com`)
+    - match: Host(`roms.713602.xyz`)
       kind: Rule
       services:
         - name: romm
