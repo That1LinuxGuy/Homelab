@@ -16,6 +16,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: romm-ingress
+  annotations:
+    tailscale.com/funnel: "true"
   namespace: romm-app
 spec:
   defaultBackend:
