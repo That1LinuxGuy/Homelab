@@ -1,14 +1,29 @@
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+# apiVersion: traefik.io/v1alpha1
+# kind: IngressRoute
+# metadata:
+#   name: romm-ingress
+#   namespace: romm-app
+# spec:
+#   entryPoints:
+#     - web
+#   routes:
+#     - match: Host(`roms.713602.xyz`)
+#       kind: Rule
+#       services:
+#         - name: romm
+#           port: 80
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: romm-ingress
   namespace: romm-app
 spec:
-  entryPoints:
-    - web
-  routes:
-    - match: Host(`roms.713602.xyz`)
-      kind: Rule
-      services:
-        - name: romm
-          port: 80
+  defaultBackend:
+    service:
+      name: romm
+      port:
+        number: 80
+  ingressClassName: tailscale
+  tls:
+    - hosts:
+        - romm
