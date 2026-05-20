@@ -1,11 +1,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: applications
+  name: romm-app
   namespace: flux-system
 spec:
   interval: 10m0s
-  path: ./kubes/apps 
+  path: ./kubes/apps/romm 
   prune: true
   sourceRef:
     kind: GitRepository
