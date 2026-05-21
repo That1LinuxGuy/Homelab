@@ -7,3 +7,4 @@ resources:
   - metal.yaml
   - prometheus.yaml
   - tailscale.yaml
+  - mariadb.yaml
