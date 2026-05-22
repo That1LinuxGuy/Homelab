@@ -1,0 +1,44 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: redis
+  namespace: flux-system
+spec:
+  releaseName: redis  
+  targetNamespace: redis
+  interval: 30m  
+  chart:
+    spec:
+      chart: redis
+      version: "25.5.x"  
+      sourceRef:
+        kind: HelmRepository
+        name: bitnami
+        namespace: flux-system
+      interval: 24h  
+
+  values:
+    architecture: replication  
+
+    valuesFrom:
+      - kind: Secret
+        name: redis-credentials
+        valuesKey: redis-password
+        targetPath: auth.password
+
+    master:
+      persistence:
+        enabled: true
+        size: 4Gi 
+      resources:
+
+    replica:
+      replicaCount: 2 
+      persistence:
+        enabled: true
+        size: 4Gi 
+
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
