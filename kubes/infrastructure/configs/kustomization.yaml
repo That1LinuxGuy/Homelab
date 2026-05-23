@@ -5,7 +5,7 @@ resources:
   - longhorn
   - metal
   - prometheus
-#  - redis
+  - redis
   - tailscale
   - trust
   - mariadb
