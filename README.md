@@ -18,7 +18,8 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 - [x] Install tailscale kube operator
 - [x] Install and configure Prometheus/Grafana
 - [x] Setup CloudNativePG for DB storage
-- [ ] Setup Bitnami Chart for Redis
+- [x] Setup Cert-manager for automated wildcard certificate management
+- [x] Setup Bitnami Chart for Redis
 - [ ] Setup Garage for S3 compatible storage
 - [ ] Install [Mijn Bureau](https://minbzk.github.io/mijn-bureau-infra/) production implementation of La Suite Numerique
 - [ ] Cry tears of joy
@@ -40,7 +41,7 @@ in /kubes, I have my fluxCD monorepo configs for all my container
 My biggest concern currently is hardware. In the [etcd guide](https://etcd.io/docs/v3.3/op-guide/hardware/) it specifically states "Fast disks are the most critical factor for etcd deployment performance and stability" \
 Currently, my prodesk only has an HDD that I will not be upgrading anytime soon due to PC part pricing :,(
 
-Nix is weird... After learning Nix code, then adding the flake, then moving EVERYTHING into directories, I ran into a lot of syntax errors and hidden issues. the challenge is that the system does not tell you why things don't work since it takes a declarative approach. This means less work for the user, but also less visibility by default.
+Also, Nix is weird... After learning enough Nix code and moving to flakes, I ran into a lot of syntax errors and hidden issues. The challenge is that the system does not tell you why things don't work since it takes a declarative approach.
 
 Another issue is mentally shifting from "Deploying" to "Automating". 
 ``` bash
