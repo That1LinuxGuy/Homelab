@@ -8,4 +8,4 @@ resources:
   - redis
   - tailscale
   - trust
-  - mariadb
+#  - mariadb
