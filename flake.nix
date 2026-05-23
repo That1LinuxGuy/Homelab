@@ -8,6 +8,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
+
      # master node | pokedex 001
      bulbasaur = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -30,7 +31,7 @@
         ];
       };
 
-      # worker node | pokedex 007
+      # server node | pokedex 007
       charmander = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [

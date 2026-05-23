@@ -83,12 +83,11 @@
   # enable auto upgrades
   system.autoUpgrade = {
     enable = true;
-    flake = "/etc/nixos/";
+    flake = "github:That1LinuxGuy/Homelab";
     flags = [
       "--print-build-logs"
-      "--commit-lock-file"  # If you want to automatically commit the updated flake.lock
     ];
-    dates = "weekly";
+    dates = "daily";
     randomizedDelaySec = "45min";
   };
 
