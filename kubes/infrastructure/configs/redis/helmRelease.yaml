@@ -19,6 +19,8 @@ spec:
 
   values:
     architecture: replication  
+    snetinel:
+      enabled: true
 
     valuesFrom:
       - kind: Secret
