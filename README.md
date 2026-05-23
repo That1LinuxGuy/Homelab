@@ -41,7 +41,7 @@ in /kubes, I have my fluxCD monorepo configs for all my container
 My biggest concern currently is hardware. In the [etcd guide](https://etcd.io/docs/v3.3/op-guide/hardware/) it specifically states "Fast disks are the most critical factor for etcd deployment performance and stability" \
 Currently, my prodesk only has an HDD that I will not be upgrading anytime soon due to PC part pricing :,(
 
-Also, Nix is weird... After learning enough Nix code and moving to flakes, I ran into a lot of syntax errors and hidden issues. The challenge is that the system does not tell you why things don't work since it takes a declarative approach.
+I rescind all previous statements about NixOS. While it is extremely complex to learn being so different from every other Linux distribution, I now manage my entire stack, from operating system to applications, entirely through Git. NixOS automatically updates itself daily from this git repo without any manual intervention.
 
 Another issue is mentally shifting from "Deploying" to "Automating". 
 ``` bash
