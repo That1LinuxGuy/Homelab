@@ -1,7 +1,7 @@
 resources:
   - cnpg
   - certs
-#  - garage
+  - garage
   - longhorn
   - metal
   - prometheus
