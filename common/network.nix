@@ -29,6 +29,7 @@
     6443 # k3s: required so pods can reach API server
     2379 # k3s, etcd clients: required for High Availability etcd
     2380 # k3s, etcd clients: required for High Availability etcd
+    10250# K3S, metrics server: required for logs and metrics
   ];
 
   networking.firewall.allowedUDPPorts = [
