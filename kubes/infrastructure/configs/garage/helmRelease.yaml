@@ -34,10 +34,10 @@ spec:
     persistence:
       enabled: true
       data:
-        storageClass: garage-data-hdd
+        storageClass: longhorn-triple
         size: 50Gi
       meta:
-        storageClass: garage-meta-ssd
+        storageClass: longhorn-triple
         size: 1Gi
     
     clusterConfig:
