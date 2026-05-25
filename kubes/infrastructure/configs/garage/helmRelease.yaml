@@ -63,3 +63,9 @@ spec:
             - media
             - roms
             - docs
+
+    monitoring:
+      metrics:
+        enabled: true
+      serviceMonitor:
+        enabled: true
