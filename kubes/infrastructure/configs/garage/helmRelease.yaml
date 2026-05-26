@@ -24,7 +24,7 @@ spec:
       secret:
         envFrom:
           - secretRef:
-              name: garage-secrets
+              name: garage-secret
       s3:
         api:
           rootDomain: ".s3.homelab.prod"
@@ -55,9 +55,7 @@ spec:
         my-key:
           envFrom:
             - secretRef:
-                name: garage-secrets
-#          keyId: GK0123456789ABCDEF01234567
-#          secretKey: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+                name: garage-secret
           buckets:
             - backups
             - media
