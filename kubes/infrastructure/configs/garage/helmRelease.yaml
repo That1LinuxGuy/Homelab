@@ -5,6 +5,7 @@ metadata:
   namespace: garage
 spec:
   interval: 30m
+  timeout: 10m
   chart:
     spec:
       chart: garage
@@ -14,6 +15,7 @@ spec:
         name: garage
         namespace: flux-system
       interval: 10m
+
 
   values:
     deployment:
