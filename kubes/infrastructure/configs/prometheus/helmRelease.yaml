@@ -33,7 +33,7 @@ spec:
     prometheus:
       prometheusSpec:
         # Retention period for metrics
-        retention: 5d
+        retention: 10d
         # Storage configuration
         storageSpec:
           volumeClaimTemplate:
@@ -42,7 +42,7 @@ spec:
                 - ReadWriteOnce
               resources:
                 requests:
-                  storage: 20Gi
+                  storage: 50Gi
         # Resource limits
         resources:
           requests:
