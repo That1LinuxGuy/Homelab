@@ -20,7 +20,7 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 - [x] Setup CloudNativePG for DB storage
 - [x] Setup Cert-manager for automated wildcard certificate management
 - [x] Setup Bitnami Chart for Redis
-- [ ] Setup Garage for S3 compatible storage
+- [x] Setup Garage for S3 compatible storage
 - [ ] Install [Mijn Bureau](https://minbzk.github.io/mijn-bureau-infra/) production implementation of La Suite Numerique
 - [ ] Cry tears of joy
 
