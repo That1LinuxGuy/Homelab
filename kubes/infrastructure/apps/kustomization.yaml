@@ -2,5 +2,6 @@ resources:
   - certs
   - database
   - longhorn
+  - garage
   - grafana
   - metal
