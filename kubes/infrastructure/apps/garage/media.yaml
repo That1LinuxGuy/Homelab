@@ -1,0 +1,9 @@
+apiVersion: garage.rajsingh.info/v1beta1
+kind: GarageBucket
+metadata:
+  name: media
+spec:
+  clusterRef:
+    name: garage
+  quotas:
+    maxSize: 50Gi

@@ -1,9 +1,10 @@
-
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: garage
+  name: garage-operator
   namespace: flux-system
 spec:
   interval: 24h
-  url: https://datahub-local.github.io/garage-helm
+  url: oci://ghcr.io/rajsinghtech/charts/garage-operator
+  ref:
+    semver: "0.6.x"

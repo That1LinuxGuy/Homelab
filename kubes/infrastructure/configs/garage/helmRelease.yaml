@@ -1,0 +1,20 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: garage-operator
+  namespace: garage
+spec:
+  interval: 1h
+  chartRef:
+    kind: OCIRepository
+    name: garage-operator
+    namespace: flux-system
+  install:
+    crds: CreateReplace
+  upgrade:
+    crds: CreateReplace
+  values:
+    crds:
+      enabled: true
+      keep: true
+

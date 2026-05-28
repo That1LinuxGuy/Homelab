@@ -1,0 +1,24 @@
+apiVersion: garage.rajsingh.info/v1beta2
+kind: GarageCluster
+metadata:
+  name: garage
+spec:
+  zone: home
+  replication:
+    factor: 3
+  storage:
+    replicas: 3
+    metadata:
+      size: 10Gi
+    data:
+      size: 100Gi
+  network:
+    rpcBindPort: 3901
+    service:
+      type: ClusterIP
+  admin:
+    adminTokenSecretRef:
+      name: garage-admin-token
+      key: admin-token
+  monitoring:
+    enabled: true
