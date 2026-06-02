@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: romm
-      version: '2.2.x'
+      version: '1.0.x'
       interval: 30m
       sourceRef:
         kind: HelmRepository
