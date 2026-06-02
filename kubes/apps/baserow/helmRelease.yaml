@@ -8,12 +8,12 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: romm
+      chart: baserow
       version: '1.0.x'
       interval: 30m
       sourceRef:
         kind: HelmRepository
-        name: my-baserow
+        name: baserow
         namespace: flux-system
 
   values:
