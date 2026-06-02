@@ -4,3 +4,6 @@ resources:
   - helmRepo.yaml
   - helmRelease.yaml
   - ingress.yaml
+  - namespace.yaml
+  - ingress.yaml
+  - secrets.yaml

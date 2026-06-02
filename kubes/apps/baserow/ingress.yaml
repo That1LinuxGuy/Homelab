@@ -1,14 +1,14 @@
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
-  name: directus-ingress
-  namespace: directus-app
+  name: baserow-ingress
+  namespace: baserow
 spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`directus.eaglhandlaundry.com`)
+    - match: Host(`baserow.713602.xyz`)
       kind: Rule
       services:
-        - name: directus
+        - name: baserow
           port: 80
