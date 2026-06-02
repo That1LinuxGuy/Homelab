@@ -28,7 +28,7 @@ spec:
 
     redis:
       enabled: false
-    postresql:
+    postgresql:
       enabled: false
   
     ingress:
