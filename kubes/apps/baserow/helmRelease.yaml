@@ -22,18 +22,16 @@ spec:
         domain: "baserow.713602.xyz"
         backendDomain: "api.baserow.713602.xyz"
         objectsDomain: "objects.baserow.713602.xyz"
+        envFrom:
+          - secretRef:
+              name: baserow-secrets
 
     redis:
       enabled: false
     postresql:
       enabled: false
   
-    backendSecrets:
-      valuesFrom:
-        secretRef:
-          name: baserow-secrets
-
-    ingres:
+    ingress:
       enabled: true
     caddy:
       enabled: false
