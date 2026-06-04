@@ -5,5 +5,4 @@ resources:
   - helmRelease.yaml
   - ingress.yaml
   - namespace.yaml
-  - ingress.yaml
   - secrets.yaml

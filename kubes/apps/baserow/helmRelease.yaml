@@ -8,8 +8,8 @@ spec:
   interval: 30m
   chart:
     spec:
-      chart: romm
-      version: '2.2.x'
+      chart: baserow
+      version: '1.0.x'
       interval: 30m
       sourceRef:
         kind: HelmRepository
@@ -22,18 +22,16 @@ spec:
         domain: "baserow.713602.xyz"
         backendDomain: "api.baserow.713602.xyz"
         objectsDomain: "objects.baserow.713602.xyz"
+        envFrom:
+          - secretRef:
+              name: baserow-secrets
 
     redis:
       enabled: false
-    postresql:
+    postgresql:
       enabled: false
   
-    backendSecrets:
-      valuesFrom:
-        secretRef:
-          name: baserow-secrets
-
-    ingres:
+    ingress:
       enabled: true
     caddy:
       enabled: false
