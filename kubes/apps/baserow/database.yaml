@@ -7,4 +7,5 @@ spec:
   name: baserow
   owner: baserow
   cluster:
-    name: postgre-sql-rw.data.svc.cluster.local
+    name: postgre-sql
+    namespace: data
