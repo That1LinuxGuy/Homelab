@@ -1,0 +1,11 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Database
+metadata: 
+  name: baserow-db
+  namespace: baserow
+spec:
+  name: baserow
+  owner: baserow
+  cluster:
+    name: postgre-sql
+    namespace: data
