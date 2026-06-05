@@ -26,6 +26,15 @@ spec:
       owner: app
       secret:
         name: postgres-app-credentials
+
+  managed:
+    roles:
+    - name: baserow
+      ensure: present
+      login: true
+      superuser: false
+      passwordSecret:
+        name: baserow-secret
   
   storage:
     size: 10Gi
