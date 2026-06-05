@@ -5,8 +5,8 @@ There are only 3 folders, each with a very specific purpose
 - infrastructure | contains all the applications that I need to support user facing content
 - apps | contains all the user facing applications
 
-## Clusters
+## clusters
 
-## Infrastructure
+## infrastructure
 
 ## apps
