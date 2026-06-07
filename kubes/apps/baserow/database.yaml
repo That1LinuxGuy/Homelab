@@ -1,10 +1,35 @@
 apiVersion: postgresql.cnpg.io/v1
-kind: Database
-metadata: 
-  name: baserow-db
+kind: Cluster
+metadata:
+  name: baserow-pg
   namespace: baserow
 spec:
-  name: baserow
-  owner: baserow
-  cluster:
-    name: postgre-sql
+  instances: 3
+
+  # PostgreSQL version
+  imageName: ghcr.io/cloudnative-pg/postgresql:16.3
+
+  postgresql:
+    parameters:
+      max_connections: "200"
+      shared_buffers: "256MB"
+      effective_cache_size: "1024MB"
+      work_mem: "4MB"
+      maintenance_work_mem: "64MB"
+
+  superuserSecret:
+    name: baserow-superuser-secret
+
+  bootstrap:
+    initdb:
+      database: baserow
+      owner: baserow
+      secret:
+        name: baserow-secrets
+
+  storage:
+    size: 10Gi
+    storageClass: longhorn-single
+
+  monitoring:
+    enablePodMonitor: true
