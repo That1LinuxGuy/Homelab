@@ -26,7 +26,8 @@ spec:
 
   storage:
     size: 10Gi
-    storageClass: longhorn-single
+    storageClass: longhorn
 
   monitoring:
     enablePodMonitor: true
+
