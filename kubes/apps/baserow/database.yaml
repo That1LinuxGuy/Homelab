@@ -24,7 +24,7 @@ spec:
       secret:
         name: baserow-secrets
 
-  superUserSecret:
+  superuserSecret:
    secretKeyRef: baserow-secrets
 
 
