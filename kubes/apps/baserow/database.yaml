@@ -25,7 +25,8 @@ spec:
         name: baserow-secrets
 
   superuserSecret:
-   secretKeyRef: baserow-secrets
+    name: baserow-secrets
+    key: postgres-password
 
 
   storage:
