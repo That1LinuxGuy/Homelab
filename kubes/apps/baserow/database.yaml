@@ -24,6 +24,10 @@ spec:
       secret:
         name: baserow-secrets
 
+  superUserSecret:
+   secretKeyRef: baserow-secrets
+
+
   storage:
     size: 10Gi
     storageClass: longhorn-double
