@@ -10,7 +10,7 @@ spec:
     - match: Host(`baserow.713602.xyz`)
       kind: Rule
       services:
-        - name: baserow
+        - name: baserow-baserow-frontend
           port: 80
 
   tls: {}   
