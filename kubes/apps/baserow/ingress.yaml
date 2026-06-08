@@ -13,5 +13,4 @@ spec:
         - name: baserow
           port: 80
 
-  ingressClassName: taefik
   tls: {}   
