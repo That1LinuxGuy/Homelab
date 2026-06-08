@@ -17,16 +17,16 @@ spec:
         namespace: flux-system
       interval: 24h  
 
+  valuesFrom:
+    - kind: Secret
+      name: redis-credentials
+      valuesKey: redis-password
+      targetPath: auth.password
+  
   values:
     architecture: replication  
     snetinel:
       enabled: true
-
-    valuesFrom:
-      - kind: Secret
-        name: redis-credentials
-        valuesKey: redis-password
-        targetPath: auth.password
 
     master:
       persistence:
