@@ -32,7 +32,7 @@ spec:
       enabled: false
   
     ingress:
-      enabled: true
+      enabled: false
     caddy:
       enabled: false
 
