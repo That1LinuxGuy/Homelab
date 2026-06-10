@@ -5,7 +5,7 @@ metadata:
   namespace: baserow
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`baserow.713602.xyz`)
       kind: Rule

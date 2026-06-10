@@ -24,7 +24,7 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/var/lib/longhorn/storage" =
+  fileSystems."/mnt/longhorn" =
     { device = "/dev/disk/by-uuid/c5610ce2-cf56-462e-ad1f-acf20e3b5bd7";
       fsType = "ext4";
     };
