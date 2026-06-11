@@ -29,15 +29,15 @@ spec:
 
   backup:
     barmanObjectStore:
-      destinationPath: ""
+      destinationPath: "s3://baserow-bucket"
       endpointURL: "http://garage.garage.svc.cluster.local:3900"
       s3Credentials:
         accessKeyId:
           name: s3-keys
-          key: accessKeyId
+          key: ACCESS_KEY_ID
         secretAccessKey:
           name: s3-keys
-          key: secretAccessKey
+          key: SECRET_ACCESS_KEY
 
   storage:
     size: 10Gi
