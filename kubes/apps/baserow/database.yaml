@@ -28,7 +28,7 @@ spec:
     name: baserow-super-secrets
 
   backup:
-    barmanObjectStorage:
+    barmanObjectStore:
       destinationPath: ""
       endpointURL: "http://garage.garage.svc.cluster.local:3900"
       s3Credentials:
