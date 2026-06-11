@@ -29,3 +29,18 @@ spec:
   importKey:
     secretRef:
       name: s3-keys
+---
+apiVersion: garage.rajsingh.info/v1beta1
+kind: GarageKey
+metadata:
+  name: baserow-key-ref
+  namespace: baserow
+spec:
+  clusterRef:
+    name: garageCluster
+    namespace: garage
+  bucketPermissions:
+    - bucketRef:
+        name: baserow
+      read: true
+      write: true

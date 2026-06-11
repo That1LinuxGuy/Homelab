@@ -7,6 +7,8 @@ spec:
   from:
     - kind: GarageBucket
       namespace: baserow
+    - kind: GarageKey
+      namespace: baserow
   to:
     - kind: GarageCluster
       name: garage
