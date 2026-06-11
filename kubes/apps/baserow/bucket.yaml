@@ -1,0 +1,31 @@
+apiVersion: garage.rajsingh.info/v1beta1
+kind: GarageBucket
+metadata:
+  name: baserow-bucket
+  namespace: baserow
+spec:
+  clusterRef:
+    name: garage
+    namespace: garage 
+  quotas:
+    maxSize: 10Gi
+---
+apiVersion: garage.rajsingh.info/v1beta1
+kind: GarageKey
+metadata:
+  name: baserow-key
+  namespace: baserow
+spec:
+  clusterRef:
+    name: garage
+    namespace: garage
+    
+  bucketPermissions:
+    - bucketRef:
+        name: baserow-bucket
+      read: true
+      write: true
+
+  importKey:
+    secretRef:
+      name: s3-keys
