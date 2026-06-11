@@ -1,4 +1,4 @@
-apiVersion: garage.rajsingh.info/v1beta1
+apiVersion: garage.rajsingh.info/v1beta2
 kind: GarageBucket
 metadata:
   name: baserow-bucket
@@ -10,7 +10,7 @@ spec:
   quotas:
     maxSize: 10Gi
 ---
-apiVersion: garage.rajsingh.info/v1beta1
+apiVersion: garage.rajsingh.info/v1beta2
 kind: GarageKey
 metadata:
   name: baserow-key
