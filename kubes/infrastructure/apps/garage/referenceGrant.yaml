@@ -5,13 +5,10 @@ metadata:
   namespace: garage
 spec:
   from:
-    - group: garage-rajsingh.info
-      kind: GarageBucket
+    - kind: GarageBucket
       namespace: baserow
-    - group: garage.rajsingh.info
-      kind: GarageKey
+    - kind: GarageKey
       namespace: baserow
   to:
-    - group: garage.rajsingh-info
-      kind: GarageCluster
+    - kind: GarageCluster
       name: garage
