@@ -1,6 +1,6 @@
 resources:
   - certs
   - longhorn
-  - garage
+#   - garage
   - grafana
   - metal
