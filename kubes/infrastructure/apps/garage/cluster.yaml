@@ -23,5 +23,7 @@ spec:
     adminTokenSecretRef:
       name: garage-admin-token
       key: admin-token
+  layoutManagement:
+    autoApply: true
   monitoring:
     enabled: true
