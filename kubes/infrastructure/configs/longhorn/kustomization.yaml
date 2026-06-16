@@ -4,6 +4,7 @@ resources:
   - namespace.yaml
   - helmRepo.yaml
   - helmRelease.yaml
+  - single.yaml
   - double.yaml
   - triple.yaml
   # - snapshot.yaml
