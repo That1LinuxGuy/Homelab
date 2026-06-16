@@ -10,11 +10,11 @@ spec:
   storage:
     replicas: 3
     metadata:
-      size: 20Gi
+      size: 10Gi
       storageClassName: longhorn-double
     data:
-      size: 300Gi
-      storageClassName: longhorn
+      size: 2500Gi
+      storageClassName: longhorn-single
   network:
     rpcBindPort: 3901
     service:
