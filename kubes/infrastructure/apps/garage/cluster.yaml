@@ -13,7 +13,7 @@ spec:
       size: 10Gi
       storageClassName: longhorn-double
     data:
-      size: 2500Gi
+      size: 250Gi
       storageClassName: longhorn-single
   network:
     rpcBindPort: 3901
