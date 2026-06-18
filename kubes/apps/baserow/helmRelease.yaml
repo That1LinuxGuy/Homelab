@@ -19,9 +19,9 @@ spec:
   values:
     global:
       baserow:
-        domain: "baserow.713602.xyz"
-        backendDomain: "api.baserow.713602.xyz"
-        objectsDomain: "objects.baserow.713602.xyz"
+        domain: "baserow.spangled-vibes.ts.net"
+        backendDomain: "api.baserow.spangled-vibes.ts.net"
+        objectsDomain: "objects.baserow.spangled-vibes.ts.net"
         envFrom:
           - secretRef:
               name: baserow-secrets
@@ -43,4 +43,4 @@ spec:
       AWS_STORAGE_BUCKET_NAME: "baserow"
       AWS_S3_ENDPOINT_URL: "http://garage.garage.svc.cluster.local:3900"
       AWS_S3_REGION_NAME: "home"
-      AWS_S3_CUSTOM_DOMAIN: ""
+      AWS_S3_CUSTOM_DOMAIN: "https://baserow.713602.xyz"

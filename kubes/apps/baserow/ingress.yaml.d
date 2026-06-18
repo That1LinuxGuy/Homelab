@@ -1,19 +1,15 @@
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
-  name: baserow-ingress
+  name: baserow
   namespace: baserow
 spec:
-  entryPoints:
-    - websecure
-  routes:
-    - match: Host(`baserow.713602.xyz`)
-      kind: Rule
-      services:
-        - name: baserow-baserow-frontend
-          port: 80
-
-  tls:    
-    store:
-      name: default
-      namespace: kube-system
+  defaultBackend:
+    service:
+      name: baserow-baserow-frontend
+      port:
+        number: 80
+  ingressClassName: tailscale
+  tls:
+    - hosts:
+        - baserow

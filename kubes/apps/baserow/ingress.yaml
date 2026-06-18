@@ -1,15 +1,62 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
 metadata:
-  name: baserow
+  name: baserow-ingress
   namespace: baserow
 spec:
-  defaultBackend:
-    service:
-      name: baserow-baserow-frontend
-      port:
-        number: 80
-  ingressClassName: tailscale
-  tls:
-    - hosts:
-        - baserow
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`baserow.713602.xyz`)
+      kind: Rule
+      services:
+        - name: baserow-baserow-frontend
+          port: 80
+  tls:    
+    store:
+      name: default
+      namespace: kube-system
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: baserow-backend
+  namespace: baserow
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`api.baserow.713602.xyz`) && PathPrefix('/ws/')
+      kind: Rule
+      services:
+        - name: baserow-baserow-backend-wsgi
+          port: 80
+    - match:
+      kind: Rule
+      services:
+        - name: baserow-baserow-backend-asgi
+          port: 8000
+  tls:    
+    store:
+      name: default
+      namespace: kube-system
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: baserow-objects
+  namespace: baserow
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`objects.baserow.713602.xyz`)
+      kind: Rule
+      services:
+        - name: garage
+          namespace: garage
+          port: 3900
+  tls:    
+    store:
+      name: default
+      namespace: kube-system
