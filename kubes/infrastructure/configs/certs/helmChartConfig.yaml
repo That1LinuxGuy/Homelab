@@ -8,3 +8,6 @@ spec:
     providers:
       kubernetesCRD:
         allowCrossNamespace: true
+    hostNetowrk: true
+    nodeSelector:
+      kubernetes.io/hostname: "bulbasaur"
