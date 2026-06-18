@@ -13,4 +13,7 @@ spec:
         - name: baserow-baserow-frontend
           port: 80
 
-  tls: {}   
+  tls:    
+    store:
+      name: default
+      namespace: true
