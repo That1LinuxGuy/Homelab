@@ -16,4 +16,4 @@ spec:
   tls:    
     store:
       name: default
-      namespace: true
+      namespace: kube-system
