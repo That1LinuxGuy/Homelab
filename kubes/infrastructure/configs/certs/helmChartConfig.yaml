@@ -9,6 +9,7 @@ spec:
       kubernetesCRD:
         allowCrossNamespace: true
 
-    hostNetwork: true
-    nodeSelector:
-      kubernetes.io/hostname: "bulbasaur"
+    deployment:
+      hostNetwork: true
+      nodeSelector:
+        kubernetes.io/hostname: "bulbasaur"
