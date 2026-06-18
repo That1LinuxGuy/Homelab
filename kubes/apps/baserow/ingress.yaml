@@ -26,12 +26,12 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: "Host(`api.baserow.713602.xyz`) && PathPrefix(`/ws/`)"
+    - match: "Host(`api-baserow.713602.xyz`) && PathPrefix(`/ws/`)"
       kind: Rule
       services:
         - name: baserow-baserow-backend-wsgi
           port: 80
-    - match: "Host(`api.baserow.713602.xyz`)"
+    - match: "Host(`api-baserow.713602.xyz`)"
       kind: Rule
       services:
         - name: baserow-baserow-backend-asgi
@@ -50,7 +50,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`objects.baserow.713602.xyz`)
+    - match: Host(`objects-baserow.713602.xyz`)
       kind: Rule
       services:
         - name: garage

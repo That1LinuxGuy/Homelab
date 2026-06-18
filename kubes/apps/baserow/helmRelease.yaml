@@ -20,8 +20,8 @@ spec:
     global:
       baserow:
         domain: "baserow.spangled-vibes.ts.net"
-        backendDomain: "api.baserow.spangled-vibes.ts.net"
-        objectsDomain: "objects.baserow.spangled-vibes.ts.net"
+        backendDomain: "api-baserow.spangled-vibes.ts.net"
+        objectsDomain: "objects-baserow.spangled-vibes.ts.net"
         envFrom:
           - secretRef:
               name: baserow-secrets
