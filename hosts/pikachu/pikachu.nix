@@ -68,7 +68,14 @@
   # services.xserver.libinput.enable = true;
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    policies = {
+      SecurityDevices = {
+        Add = {"p11-kit-proxy" = "${pkgs.p11-kit}/lib/p11-kit-proxy.so"; };
+      };
+    };
+  };
 
   environment.systemPackages = with pkgs; [
     kubectl
@@ -77,6 +84,10 @@
     ccid
     pcsc-tools
     ];
+
+  environment.etc."pkcs11/modules/opensc-pkcs11".text = ''
+    module: ${pkgs.opensc}/lib/opensc-pkcs11.so
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
