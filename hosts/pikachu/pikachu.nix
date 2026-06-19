@@ -46,6 +46,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
   services.tailscale.enable = true;
+  services.pcscd.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -72,6 +73,9 @@
   environment.systemPackages = with pkgs; [
     kubectl
     fluxcd
+    opensc
+    ccid
+    pcsc-tools
     ];
 
   # Some programs need SUID wrappers, can be configured further or are
