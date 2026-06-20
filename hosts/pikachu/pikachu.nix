@@ -44,8 +44,6 @@
       configFile = ./qtile-config.py;
       extraPackages = python3Packages: with python3Packages; [
         qtile-extras
-        wlroots
-        psutil
       ];
     };
   };
