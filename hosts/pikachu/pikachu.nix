@@ -36,6 +36,19 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  
+  # Enable qtile
+  programs.qtile = {
+    enable = true;
+    backend = "wayland";
+    configFile = ./qtile-config.py;
+    extraPackages = python3Packages: with python3Packages; [
+      qtile-extras
+      pwayland
+      wlroots
+      psutil
+    ];
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
