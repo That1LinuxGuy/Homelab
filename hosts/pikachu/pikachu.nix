@@ -29,24 +29,26 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   
-  # Enable qtile
-  windowManager.qtile = {
+  # Enable the X11 windowing system.
+  # You can disable this if you're only using the Wayland session.
+  services.xserver = {
     enable = true;
-    configFile = ./qtile-config.py;
-    extraPackages = python3Packages: with python3Packages; [
-      qtile-extras
-      pwayland
-      wlroots
-      psutil
-    ];
+    
+    # Enable qtile
+    windowManager.qtile = {
+      enable = true;
+      configFile = ./qtile-config.py;
+      extraPackages = python3Packages: with python3Packages; [
+        qtile-extras
+        pwayland
+        wlroots
+        psutil
+      ];
+    };
   };
 
   # Configure keymap in X11
