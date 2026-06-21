@@ -1,9 +1,8 @@
 { pkgs, config, ... }:
 
+# Niri configuration with noctalia-shell
+
 {
-
-  description = "Niri setup with noctalia shell";
-
   programs.niri = {
     enable = true;
   };
