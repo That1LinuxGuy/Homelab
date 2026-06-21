@@ -4,7 +4,7 @@
 
 {
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = false;
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   
   # Enable the X11 windowing system.
