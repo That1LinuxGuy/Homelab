@@ -16,7 +16,7 @@
           ./common/default.nix
           ./common/network.nix
           ./hosts/bulbasaur/bulbasaur.nix
-          ./modules/k3s-master.nix
+          ./modules/k3s/k3s-master.nix
         ];
       };
 
@@ -27,7 +27,7 @@
           ./common/default.nix
           ./common/network.nix
           ./hosts/squirtle/squirtle.nix
-          ./modules/k3s-server.nix
+          ./modules/k3s/k3s-server.nix
         ];
       };
 
@@ -38,7 +38,7 @@
           ./common/default.nix
           ./common/network.nix
           ./hosts/charmander/charmander.nix
-          ./modules/k3s-server.nix
+          ./modules/k3s/k3s-server.nix
         ];
       };
 
@@ -49,6 +49,7 @@
           ./common/default.nix
           ./common/network.nix
           ./hosts/pikachu/pikachu.nix
+          ./modules/niri/niri.nix
         ];
       };
     };

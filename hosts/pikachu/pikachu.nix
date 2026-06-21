@@ -36,16 +36,7 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver = {
-    enable = true;
-    
-    # Enable qtile
-    windowManager.qtile = {
-      enable = true;
-      configFile = ./qtile-config.py;
-      extraPackages = python3Packages: with python3Packages; [
-        qtile-extras
-      ];
-    };
+    enable = false;
   };
 
   # Configure keymap in X11
@@ -87,6 +78,11 @@
       };
     };
   };
+ 
+  # configure pksc11 to use opensc 
+  environment.etc."pkcs11/modules/opensc-pkcs11".text = ''
+    module: ${pkgs.opensc}/lib/opensc-pkcs11.so
+  '';
 
   environment.systemPackages = with pkgs; [
     kubectl
@@ -97,28 +93,10 @@
     hugo
     ];
 
-  environment.etc."pkcs11/modules/opensc-pkcs11".text = ''
-    module: ${pkgs.opensc}/lib/opensc-pkcs11.so
-  '';
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
