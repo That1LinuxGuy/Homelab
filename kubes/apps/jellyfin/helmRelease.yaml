@@ -25,6 +25,24 @@ spec:
         cpu: 100m
         memory: 512Mi
 
+    livenessProbe:
+      httpGet:
+        path: /health
+        port: http
+      initialDelaySeconds: 10
+      timeoutSeconds: 5 
+      failureThreshold: 6
+      periodSeconds: 10
+    
+    readinessProbe:
+      httpGet:
+        path: /health
+        port: http
+      initialDelaySeconds: 10
+      timeoutSeconds: 5
+      failureThreshold: 6
+      periodSeconds: 10
+
     persistence:
       config:
         enabled: true
