@@ -6,7 +6,6 @@
   programs.niri.enable = true;
   programs.mpvpaper.enable = true;
   programs.swaylock.enable = true;
-  };
 
   services.displayManager.sddm.enable = true;
 
