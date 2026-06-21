@@ -94,6 +94,7 @@
     opensc
     ccid
     pcsc-tools
+    hugo
     ];
 
   environment.etc."pkcs11/modules/opensc-pkcs11".text = ''
