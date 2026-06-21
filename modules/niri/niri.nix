@@ -12,7 +12,7 @@
   xwayland-satellite
   alacritty
   fuzzel
-  mpvaper
+  mpvpaper
   swaylock
   ];
 
