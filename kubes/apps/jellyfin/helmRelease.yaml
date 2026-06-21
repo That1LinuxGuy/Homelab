@@ -16,7 +16,16 @@ spec:
         namespace: jellyfin
 
   values:
-    
+    extraContainers:
+      - name: filebrowser
+        image: filebrowser/filebrowser:v2
+        ports:
+          - containerPort: 80
+            name: filebrowser
+          - volumeMounts:
+              name: media
+              mountPath: /srv
+
     resources:
       limits:
         cpu: 500m
