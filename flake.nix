@@ -50,7 +50,7 @@
           ./common/network.nix
           ./hosts/pikachu/pikachu.nix
           ./modules/niri/niri.nix
-          ./modules/plasma/plasma/nix
+          ./modules/plasma/plasma.nix
         ];
       };
     };
