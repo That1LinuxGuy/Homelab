@@ -21,10 +21,9 @@ spec:
         image: filebrowser/filebrowser:v2
         ports:
           - containerPort: 80
-            name: filebrowser
-          - volumeMounts:
-              name: media
-              mountPath: /srv
+        volumeMounts:
+          name: media
+          mountPath: /srv
 
     resources:
       limits:
