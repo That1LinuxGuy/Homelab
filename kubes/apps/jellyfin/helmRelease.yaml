@@ -1,0 +1,42 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: jellyfin
+  namespace: jellyfin
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: jellyfin
+      version: '3.2.x'
+      interval: 30m
+      sourceRef:
+        kind: HelmRepository
+        name: jellyfin
+        namespace: jellyfin
+
+  values:
+    
+    resources:
+      limits:
+        cpu: 500m
+        memory: 2Gi
+      requests:
+        cpu: 100m
+        memory: 512Mi
+
+    persistence:
+      config:
+        enabled: true
+        size: 5Gi
+        storageClass: longhorn-double
+      media:
+        enabled: true
+        size: 100Gi
+        storageClass: longhorn-double
+
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true
+
