@@ -24,5 +24,6 @@
   fuzzel
   ];
 
-  environment.xdg.configFile."niri/config.kdl".source = ./config.kdl;
+  environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
+  systemd.user.services.niri.enableDefaultPath = false;
 }
