@@ -22,8 +22,8 @@ spec:
         ports:
           - containerPort: 80
         volumeMounts:
-          name: media
-          mountPath: /srv
+          - name: media
+            mountPath: /srv
 
     resources:
       limits:
