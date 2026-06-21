@@ -24,5 +24,5 @@
   fuzzel
   ];
 
-  xdg.configFile."niri/config.kdl".source = ./config.kdl;
+  environment.xdg.configFile."niri/config.kdl".source = ./config.kdl;
 }
