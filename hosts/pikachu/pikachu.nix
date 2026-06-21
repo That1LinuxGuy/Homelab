@@ -19,12 +19,23 @@
   crypttabExtraOpts = [ "tpm2-device=auto" ];
   };
   
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-media-sdk
+      libva
+    ];
+  };
+
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "iHD";
+  };
+
   networking.hostName = "pikachu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
