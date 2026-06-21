@@ -295,7 +295,7 @@
       ]
     },
     "wallpaper": {
-      "enabled": true,
+      "enabled": false,
       "overviewEnabled": false,
       "directory": "/home/mcallen/Pictures/Wallpapers",
       "monitorDirectories": [],
