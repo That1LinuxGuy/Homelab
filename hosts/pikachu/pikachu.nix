@@ -93,7 +93,7 @@
     pcsc-tools
     hugo
     vesktop
-    newelle
+    qutebrowser
     ];
 
   # List services that you want to enable:
