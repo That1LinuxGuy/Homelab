@@ -14,6 +14,7 @@
   fuzzel
   mpvpaper
   swaylock
+  nautilus
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
