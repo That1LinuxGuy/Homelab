@@ -31,7 +31,7 @@ I tried to make it simple. It makes sense to me at least. Each machine is funnel
 in /hosts, I have all my machines and hardware \
 in /modules, I have all the various pieces I plug into my flake.nix \
 in /kubes, I have my fluxCD monorepo configs for all my containers
-- check out the (README)[/kubes/README.md] in that folder for more info on kubernetes.
+- check out the [README](/kubes/README.md) in that folder for more info on kubernetes.
 
 ## Issues:
 
