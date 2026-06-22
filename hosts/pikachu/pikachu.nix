@@ -50,6 +50,7 @@
   services.printing.enable = true;
   services.tailscale.enable = true;
   services.pcscd.enable = true;
+  services.gvfs.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
