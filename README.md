@@ -29,21 +29,16 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 I tried to make it simple. It makes sense to me at least. Each machine is funneled into flake.nix
 
 in /hosts, I have all my machines and hardware \
-in /common, I have common services, networking, and configs \
-in /modules, I have the specific roles for various machines defined \
-in /kubes, I have my fluxCD monorepo configs for all my container
-- clusters is my fluxCD config folder
-- infrastructure holds pods required to run services
-- apps is where actual services will run
+in /modules, I have all the various pieces I plug into my flake.nix \
+in /kubes, I have my fluxCD monorepo configs for all my containers
+- check out the (README)[/kubes/README.md] in that folder for more info on kubernetes.
 
 ## Issues:
 
 My biggest concern currently is hardware. In the [etcd guide](https://etcd.io/docs/v3.3/op-guide/hardware/) it specifically states "Fast disks are the most critical factor for etcd deployment performance and stability" \
-Currently, my prodesk only has an HDD that I will not be upgrading anytime soon due to PC part pricing :,(
+To date, I have had no issues running etcd on a HDD disk. Thankfully, my cluster is small, which has kept etcd from expanding too much. 
 
-I rescind all previous statements about NixOS. While it is extremely complex to learn being so different from every other Linux distribution, I now manage my entire stack, from operating system to applications, entirely through Git. NixOS automatically updates itself daily from this git repo without any manual intervention.
-
-Another issue is mentally shifting from "Deploying" to "Automating". 
+Another issue is mentally shifting from "Deploying" to "Automating":
 ``` bash
 docker compose up -d
 ```
@@ -55,5 +50,15 @@ helm install
 ```
 This also deploys an app
 
-Now, FluxCD does that job and my role is to create the "platform" to get apps running
+Now, I use this workflow:
+```bash
+git add .
+git commit -m "message"
+git push
+# wait a few seconds just in case
+flux reconcile source git flux-system
+```
+However, this has also led to some issues. Because I have no automated testing set up, I regularly misgonfigure a file. When this happens, I only know because flux tells me or because my cluster isn't acting the way I *thought* I configured it.
+
+Lastly, netowrking has been challenging. As I work to get my cloudflare account connected to my internal services, I realized that my metalLB ip address for the traefik proxy rotates between devices. Because my my routers limitations, I am only able to port forward based on hostname. Since I cannot port forward to the IP address of my traefik proxy, my cloudflare is unable to reach my cluster. 
 

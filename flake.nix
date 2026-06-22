@@ -1,5 +1,5 @@
 {
-  description = "Master flake to manage k3s node configuration";
+  description = "Master flake to manage host machines configurations";
 
   inputs = {
     # NixOS official package source, using the nixos-25.11 branch here
@@ -13,9 +13,9 @@
      bulbasaur = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./common/default.nix
-          ./common/network.nix
           ./hosts/bulbasaur/bulbasaur.nix
+          ./modules/common/default.nix
+          ./modules/common/network.nix
           ./modules/k3s/k3s-master.nix
         ];
       };
@@ -24,9 +24,9 @@
       squirtle = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./common/default.nix
-          ./common/network.nix
           ./hosts/squirtle/squirtle.nix
+          ./modules/common/default.nix
+          ./modules/common/network.nix
           ./modules/k3s/k3s-server.nix
         ];
       };
@@ -35,9 +35,9 @@
       charmander = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./common/default.nix
-          ./common/network.nix
           ./hosts/charmander/charmander.nix
+          ./modules/common/default.nix
+          ./modules/common/network.nix
           ./modules/k3s/k3s-server.nix
         ];
       };
@@ -46,9 +46,9 @@
       pikachu = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./common/default.nix
-          ./common/network.nix
           ./hosts/pikachu/pikachu.nix
+          ./modules/common/default.nix
+          ./modules/common/network.nix
           ./modules/niri/niri.nix
           ./modules/plasma/plasma.nix
         ];
