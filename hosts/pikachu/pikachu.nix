@@ -92,6 +92,8 @@
     ccid
     pcsc-tools
     hugo
+    vesktop
+    newelle
     ];
 
   # List services that you want to enable:
