@@ -51,6 +51,7 @@
   services.tailscale.enable = true;
   services.pcscd.enable = true;
   services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
