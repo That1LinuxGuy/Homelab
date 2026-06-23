@@ -95,8 +95,8 @@
     pcsc-tools
     hugo
     vesktop
-    qutebrowser
-    ];
+    brave
+  ];
 
   # List services that you want to enable:
 
