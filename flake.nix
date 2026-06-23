@@ -49,6 +49,7 @@
           ./hosts/pikachu/pikachu.nix
           ./modules/common/default.nix
           ./modules/common/network.nix
+          ./modules/common/vim.nix
           ./modules/niri/niri.nix
           ./modules/plasma/plasma.nix
         ];
