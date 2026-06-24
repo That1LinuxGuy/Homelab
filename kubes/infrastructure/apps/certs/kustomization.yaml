@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
   - wildcard.yaml
   - cloudflare.yaml
+  - cloudflared.yaml
   - store.yaml
