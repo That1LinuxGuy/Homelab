@@ -180,7 +180,7 @@ layout {
 // See the binds section below for more spawn examples.
 
 spawn-at-startup "noctalia-shell"
-spawn-sh-at-startup "firefox --headless"
+spawn-sh-at-startup "brave --headless -P daemon"
 // spawn-sh-at-startup "mpvpaper -s -o 'hwdec=auto loop no-audio' eDP-1 /home/mcallen/Videos/pikachu.mp4"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -263,11 +263,11 @@ binds {
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Alt+F { spawn "firefox"; }
+    Mod+Alt+F { spawn "brave"; }
     Mod+E { spawn "nautilus"; }
-    Mod+G {spawn "xdg-open" "https://gemini.google.com"; }
-    Mod+Shift+G {spawn "xdg-open" "https://github.com/That1LinuxGuy/Homelab"; }
-    Mod+Shift+Q {spawn "xdg-open"; }
+    Mod+G {spawn "brave" "https://gemini.google.com"; }
+    Mod+Shift+G {spawn "brave" "https://github.com/That1LinuxGuy/Homelab"; }
+    Mod+Shift+Q {spawn "brave"; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return { spawn "alacritty"; }
