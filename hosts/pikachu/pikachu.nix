@@ -97,6 +97,7 @@
     vesktop
     brave
     newelle
+    collabora-desktop
   ];
 
   # List services that you want to enable:
