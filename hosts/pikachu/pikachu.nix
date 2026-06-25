@@ -96,6 +96,7 @@
     hugo
     vesktop
     brave
+    newelle
   ];
 
   # List services that you want to enable:
