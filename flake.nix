@@ -15,6 +15,7 @@
         modules = [
           ./hosts/bulbasaur/bulbasaur.nix
           ./modules/common/default.nix
+          ./modules/common/vim.nix
           ./modules/common/network.nix
           ./modules/k3s/k3s-master.nix
         ];
@@ -26,6 +27,7 @@
         modules = [
           ./hosts/squirtle/squirtle.nix
           ./modules/common/default.nix
+          ./modules/common/vim.nix
           ./modules/common/network.nix
           ./modules/k3s/k3s-server.nix
         ];
@@ -37,6 +39,7 @@
         modules = [
           ./hosts/charmander/charmander.nix
           ./modules/common/default.nix
+          ./modules/common/vim.nix
           ./modules/common/network.nix
           ./modules/k3s/k3s-server.nix
         ];

@@ -9,6 +9,9 @@
   networking.hostName = "bulbasaur"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
+  networking.firewall.allowedTCPPorts = [
+    11434   # Ollama  
+  
   environment.systemPackages = with pkgs; [
     ollama
   ];
