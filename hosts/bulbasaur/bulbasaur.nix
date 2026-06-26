@@ -11,6 +11,7 @@
   
   networking.firewall.allowedTCPPorts = [
     11434   # Ollama  
+  ];
   
   environment.systemPackages = with pkgs; [
     ollama
