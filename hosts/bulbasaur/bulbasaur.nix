@@ -8,6 +8,10 @@
 
   networking.hostName = "bulbasaur"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  
+  environment.systemPackages = with pkgs; [
+    ollama
+  ];
 
   services.openiscsi = {
   enable = true;
