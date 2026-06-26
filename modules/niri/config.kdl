@@ -265,6 +265,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Alt+F { spawn "brave"; }
     Mod+E { spawn "nautilus"; }
+    Mod+N { spawn "newelle"; }
     Mod+G {spawn "brave" "https://gemini.google.com"; }
     Mod+Shift+G {spawn "brave" "https://github.com/That1LinuxGuy/Homelab"; }
     Mod+Shift+Q {spawn "brave"; }

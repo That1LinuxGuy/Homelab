@@ -9,16 +9,6 @@
   networking.hostName = "bulbasaur"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   
-  networking.firewall.allowedTCPPorts = [
-    11434   # Ollama  
-  ];
-  
-  services.ollama = {
-    enable = true;
-    host = "0.0.0.0";
-    loadModels = [ "llama3.2:3b" ];
-  };
-
   services.openiscsi = {
   enable = true;
   name = "${config.networking.hostName}";
