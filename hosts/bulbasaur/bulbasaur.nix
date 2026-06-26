@@ -13,9 +13,11 @@
     11434   # Ollama  
   ];
   
-  environment.systemPackages = with pkgs; [
-    ollama
-  ];
+  services.ollama = {
+    enable = true;
+    host = "0.0.0.0.";
+    loadModels = [ "llama3.2:3b" ];
+  };
 
   services.openiscsi = {
   enable = true;
