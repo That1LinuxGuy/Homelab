@@ -1,0 +1,66 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: ocis-chart
+  namespace: owncloud
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: ./owncloud/ocis
+      version: '0.7.x'
+      interval: 30m
+      sourceRef:
+        kind: GitRepository
+        name: ocis-chart
+        namespace: flux-system
+
+  values:
+    externalDomain: ocis.713602.xyz
+    
+    ingress:
+      enabled : false
+
+    insecure:
+      oidcIdpInsecure: true
+      ocisHttpApiInsecure: true
+    
+    features:
+      virusscan:
+        enabled: true
+      policies:
+        enabled: true
+      ocm:
+        enabled: true
+
+    services:
+      idm:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+      nats:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+      search:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+      storagesystem:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+      storageusers:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+      ocm:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
