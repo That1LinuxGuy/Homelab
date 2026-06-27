@@ -29,7 +29,7 @@ spec:
       virusscan:
         enabled: true
       policies:
-        enabled: true
+        enabled: false
       ocm:
         enabled: true
 
