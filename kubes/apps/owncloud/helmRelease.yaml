@@ -33,10 +33,6 @@ spec:
       ocm:
         enabled: true
     
-    storage:
-      users:
-        driver: s3ng
-    
     config:
       storage:
         s3ng:
@@ -77,4 +73,9 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          size: 5Gi
+        storageBackend:
+          driver:
+            s3ng:
+              endpoint: "http://garage.garage.svc.cluster.local:3900" 
+              bucket: "owncloud-bucket"
+              region: "home"
