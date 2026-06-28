@@ -1,14 +1,14 @@
 apiVersion: garage.rajsingh.info/v1beta1
 kind: GarageReferenceGrant
 metadata:
-  name: baserow-grant
+  name: owncloud-grant
   namespace: garage
 spec:
   from:
     - kind: GarageBucket
-      namespace: baserow
+      namespace: owncloud
     - kind: GarageKey
-      namespace: baserow
+      namespace: owncloud
   to:
     - kind: GarageCluster
       name: garage
