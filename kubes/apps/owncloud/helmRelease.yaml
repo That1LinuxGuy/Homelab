@@ -73,6 +73,7 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClass: "longhorn-single"
         storageBackend:
           driver:
             s3ng:
