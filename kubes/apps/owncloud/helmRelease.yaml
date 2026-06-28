@@ -24,7 +24,13 @@ spec:
     insecure:
       oidcIdpInsecure: true
       ocisHttpApiInsecure: true
-    
+
+    securityContext:
+      runAsUser: 1000
+      runAsGrou: 1000
+      fsGroup: 1000
+      fsGroupChangePolicy: OnRootMismatch   
+ 
     features:
       virusscan:
         enabled: true
@@ -32,13 +38,7 @@ spec:
         enabled: false
       ocm:
         enabled: true
-    
-    config:
-      storage:
-        s3ng:
-          endpoint: "http://garage.garage.svc.cluster.local:3900" 
-          bucket: "owncloud-bucket"
-          region: "home"
+
     secretRefs:
       s3credentialsSecretRef: s3-key
  
@@ -48,28 +48,50 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClassName: longhorn-double
+          size: 5Gi
       nats:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClassName: longhorn-double
+          size: 5Gi
       search:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClassName: longhorn-double
+          size: 5Gi
       storagesystem:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClassName: longhorn-double
+          size: 5Gi
       ocm:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClassName: longhorn-double
+          size: 5Gi
       storageusers:
+        storageBackend:
+          driver: s3ng
+          driverConfig:
+            s3ng:
+              endpoint: "http://garage.garage.svc.cluster.local:3900" 
+              bucket: "owncloud-bucket"
+              region: "default"
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
+          storageClassName: longhorn-single
+          size: 100Gi
+
+    monitoring:
+      enabled: true
