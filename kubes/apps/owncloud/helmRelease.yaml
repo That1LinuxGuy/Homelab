@@ -73,10 +73,9 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClass: "longhorn-single"
-        storageBackend:
-          driver:
-            s3ng:
-              endpoint: "http://garage.garage.svc.cluster.local:3900" 
-              bucket: "owncloud-bucket"
-              region: "home"
+          storageBackend:
+            driver:
+              s3ng:
+                endpoint: "http://garage.garage.svc.cluster.local:3900" 
+                bucket: "owncloud-bucket"
+                region: "home"
