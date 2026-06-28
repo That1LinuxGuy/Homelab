@@ -72,3 +72,9 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
+      storageusers:
+        persistence:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+          size: 5Gi
