@@ -4,3 +4,5 @@ resources:
   - namespace.yaml
   - helmRepo.yaml
   - helmRelease.yaml
+  - bucket.yaml
+  - secrets.yaml

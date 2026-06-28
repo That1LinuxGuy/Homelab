@@ -32,7 +32,20 @@ spec:
         enabled: false
       ocm:
         enabled: true
-
+    
+    storage:
+      users:
+        driver: s3ng
+    
+    config:
+      storage:
+        s3ng:
+          endpoint: "http://garage.garage.svc.cluster.local:3900" 
+          bucket: "owncloud-bucket"
+          region: "home"
+    secretRefs:
+      s3credentialsSecretRef: s3-key
+ 
     services:
       idm:
         persistence:
@@ -50,11 +63,6 @@ spec:
           accessModes:
             - ReadWriteOnce
       storagesystem:
-        persistence:
-          enabled: true
-          accessModes:
-            - ReadWriteOnce
-      storageusers:
         persistence:
           enabled: true
           accessModes:
