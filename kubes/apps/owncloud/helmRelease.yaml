@@ -40,7 +40,7 @@ spec:
         enabled: true
 
     secretRefs:
-      s3credentialsSecretRef: s3-key
+      s3CredentialsSecretRef: s3-key
  
     services:
       idm:
