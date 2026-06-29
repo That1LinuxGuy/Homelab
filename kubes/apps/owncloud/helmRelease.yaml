@@ -85,15 +85,13 @@ spec:
             s3ng:
               endpoint: "http://garage.garage.svc.cluster.local:3900" 
               bucket: "owncloud-bucket"
-              region: "default"
+              region: "home"
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
           storageClassName: longhorn-single
           size: 10Gi
-        extraEnv:
-          STORAGE_USERS_DRIVER_S3NG_PATHSTYLE: "true"
 
     monitoring:
       enabled: true
