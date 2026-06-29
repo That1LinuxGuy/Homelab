@@ -52,6 +52,9 @@
   services.pcscd.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+  services.ollama = {
+    enable = true;
+    loadModels = [ "gemma3:1b" ]
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
