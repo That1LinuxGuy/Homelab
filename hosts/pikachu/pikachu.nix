@@ -55,6 +55,7 @@
   services.ollama = {
     enable = true;
     loadModels = [ "gemma3:1b" ]
+  };
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
