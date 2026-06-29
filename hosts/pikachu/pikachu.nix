@@ -54,7 +54,7 @@
   services.udisks2.enable = true;
   services.ollama = {
     enable = true;
-    loadModels = [ "gemma3:1b" ]
+    loadModels = [ "gemma3:1b" ];
   };
 
   # Enable sound with pipewire.
