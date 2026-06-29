@@ -91,7 +91,7 @@ spec:
           accessModes:
             - ReadWriteOnce
           storageClassName: longhorn-single
-          size: 10Gi
+          size: 100Gi
 
     monitoring:
       enabled: true
