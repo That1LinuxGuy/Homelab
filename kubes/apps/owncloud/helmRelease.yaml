@@ -37,7 +37,7 @@ spec:
  
     features:
       virusscan:
-        enabled: true
+        enabled: false
       policies:
         enabled: false
       ocm:
