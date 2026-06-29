@@ -21,10 +21,6 @@ spec:
     ingress:
       enabled : false
 
-    securityContext:
-      machineAuthApiKeySecretRef: machine-auth-api-key
-      jwtSecretRef: jwt-secret
-
     insecure:
       oidcIdpInsecure: true
       ocisHttpApiInsecure: true
@@ -34,6 +30,8 @@ spec:
       runAsGroup: 1000
       fsGroup: 1000
       fsGroupChangePolicy: OnRootMismatch   
+      machineAuthApiKeySecretRef: machine-auth-api-key
+      jwtSecretRef: jwt-secret
  
     features:
       virusscan:
