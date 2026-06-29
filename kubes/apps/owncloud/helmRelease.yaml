@@ -39,9 +39,6 @@ spec:
       ocm:
         enabled: true
 
-    secretRefs:
-      s3CredentialsSecretRef: s3-key
- 
     services:
       idm:
         persistence:
@@ -79,18 +76,11 @@ spec:
           storageClassName: longhorn-double
           size: 5Gi
       storageusers:
-        storageBackend:
-          driver: s3ng
-          driverConfig:
-            s3ng:
-              endpoint: "http://garage.garage.svc.cluster.local:80" 
-              bucket: "owncloud-bucket"
-              region: ""
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-single
+          storageClassName: longhorn-double
           size: 100Gi
 
     monitoring:
