@@ -31,7 +31,7 @@ spec:
       fsGroup: 1000
       fsGroupChangePolicy: OnRootMismatch   
     
-    sercretRefs:
+    secretRefs:
       machineAuthApiKeySecretRef: machine-auth-api-key
       jwtSecretRef: jwt-secret
  
