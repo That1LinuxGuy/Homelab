@@ -83,7 +83,7 @@ spec:
           driver: s3ng
           driverConfig:
             s3ng:
-              endpoint: "http://garage.garage.svc.cluster.local:3900" 
+              endpoint: "http://garage.garage.svc.cluster.local:80" 
               bucket: "owncloud-bucket"
               region: ""
         persistence:
