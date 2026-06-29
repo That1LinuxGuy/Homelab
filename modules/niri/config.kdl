@@ -179,7 +179,7 @@ layout {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 
-spawn-at-startup "noctalia-shell"
+spawn-at-startup "env" "QT_QPA_PLATFORMTHEME=gtk3" "noctalia-shell"
 spawn-sh-at-startup "brave --headless -P daemon"
 // spawn-sh-at-startup "mpvpaper -s -o 'hwdec=auto loop no-audio' eDP-1 /home/mcallen/Videos/pikachu.mp4"
 

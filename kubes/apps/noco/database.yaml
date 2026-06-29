@@ -1,8 +1,8 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: Cluster
 metadata:
-  name: baserow-pg
-  namespace: baserow
+  name: noco-pg
+  namespace: noco-db
 spec:
   instances: 3
 
@@ -19,25 +19,13 @@ spec:
 
   bootstrap:
     initdb:
-      database: baserow
-      owner: baserow
+      database: noco
+      owner: noco
       secret:
-        name: baserow-secrets
+        name: noco-secrets
 
   superuserSecret:
-    name: baserow-super-secrets
-
-  backup:
-    barmanObjectStore:
-      destinationPath: "s3://baserow-bucket"
-      endpointURL: "http://garage.garage.svc.cluster.local:3900"
-      s3Credentials:
-        accessKeyId:
-          name: s3-keys
-          key: ACCESS_KEY_ID
-        secretAccessKey:
-          name: s3-keys
-          key: SECRET_ACCESS_KEY
+    name: noco-super-secrets
 
   storage:
     size: 10Gi
@@ -45,4 +33,3 @@ spec:
 
   monitoring:
     enablePodMonitor: true
-

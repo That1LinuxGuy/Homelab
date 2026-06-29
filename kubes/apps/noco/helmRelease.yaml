@@ -1,0 +1,39 @@
+
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: nocodb
+  namespace: noco-db
+spec:
+  interval: 30m
+  chart:
+    spec:
+      chart: nocodb
+      interval: 30m
+      sourceRef:
+        kind: ICORepository
+        name: noco-db
+        namespace: flux-system
+
+  values:
+    nocodb:
+      publicUrl: "noco.713602.xyz"
+      dashboardUrl: "noco-db.713602.xyz"
+
+  externalDatabase:
+    host: noco-rw.
+    port: 5432
+    database: noco
+    username: noco
+    existingSecret: noco-secret
+
+  externalRedis:
+    
+  persistence:
+    enabled: true
+    storageClass: longhorn-single
+    size: 10Gi
+
+  monitoring:
+    sentry:
+      enabled: true
