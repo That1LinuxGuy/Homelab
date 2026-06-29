@@ -4,3 +4,4 @@ resources:
   - cluster.yaml
   - key.yaml
   - referenceGrant.yaml
+  - ingress.yaml
