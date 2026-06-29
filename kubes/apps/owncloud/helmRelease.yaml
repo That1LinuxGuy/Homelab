@@ -91,7 +91,9 @@ spec:
           accessModes:
             - ReadWriteOnce
           storageClassName: longhorn-single
-          size: 100Gi
+          size: 10Gi
+        extraEnv:
+          STORAGE_USERS_DRIVER_S3NG_PATHSTYLE: "true"
 
     monitoring:
       enabled: true
