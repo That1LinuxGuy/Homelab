@@ -102,6 +102,7 @@
     brave
     newelle
     collabora-desktop
+    krita
   ];
 
   # List services that you want to enable:
