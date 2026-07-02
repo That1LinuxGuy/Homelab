@@ -6,10 +6,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     # NixOS unstable package source
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, ... }@inputs: {
+  outputs = { self, nixpkgs, unstable, ... }@inputs: {
     nixosConfigurations = {
 
      # master node | pokedex 001
@@ -51,6 +51,7 @@
       # work laptop | pokedex 025
       pikachu = nixpkgs.lib.nixosSystem { 
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pikachu/pikachu.nix
           ./modules/common/default.nix
