@@ -7,7 +7,7 @@
   specialArgs = let
           system = "x86_64-linux";
         in {
-          usntable = import nixpkgs-unstable {
+          unstable = import nixpkgs-unstable {
             inherit system;
             config.allowUnfree = true;
           };
