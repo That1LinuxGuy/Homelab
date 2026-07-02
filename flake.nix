@@ -15,6 +15,7 @@
      # master node | pokedex 001
      bulbasaur = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/bulbasaur/bulbasaur.nix
           ./modules/common/default.nix
@@ -27,6 +28,7 @@
       # server node | pokedex 004
       squirtle = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/squirtle/squirtle.nix
           ./modules/common/default.nix
@@ -39,6 +41,7 @@
       # server node | pokedex 007
       charmander = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/charmander/charmander.nix
           ./modules/common/default.nix
@@ -51,6 +54,7 @@
       # work laptop | pokedex 025
       pikachu = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pikachu/pikachu.nix
           ./modules/common/default.nix
