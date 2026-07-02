@@ -103,6 +103,7 @@
     newelle
     collabora-desktop
     krita
+    element-web
   ];
 
   # List services that you want to enable:
