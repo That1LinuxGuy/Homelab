@@ -21,8 +21,8 @@ For the OS, I wanted something I could set, forget, and easily copy to new machi
 - [x] Setup Cert-manager for automated wildcard certificate management
 - [x] Setup Bitnami Chart for Redis
 - [x] Setup Garage for S3 compatible storage
-- [ ] Install [Mijn Bureau](https://minbzk.github.io/mijn-bureau-infra/) production implementation of La Suite Numerique
-- [ ] Cry tears of joy
+- [x] Install OwnCloud Infinite Scale
+- [x] Cry tears of joy
 
 ## Layout:
 
