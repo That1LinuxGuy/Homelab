@@ -1,11 +1,18 @@
 { pkgs, self, nixpkgs-unstable, ... }: 
 
 # Any latest version packages I may need
-let
-  unstable = import inputs.nixpkgs-unstable;
-in
 
 {
+
+  specialArgs = let
+          system = "x86_64-linux";
+        in {
+          usntable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        };
+
   environment.systemPackages =  [
     unstable.newelle
   ];
