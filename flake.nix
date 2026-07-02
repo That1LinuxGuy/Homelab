@@ -49,8 +49,9 @@
       };
 
       # work laptop | pokedex 025
-      pikachu = nixpkgs.lib.nixosSystem {
+      pikachu = let 
         system = "x86_64-linux";
+      in nixpkgs.lib.nixosSystem { 
         specialArgs = { 
           unstable = import nixpkgs-unstable {
             inherit system;
