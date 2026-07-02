@@ -4,6 +4,6 @@
 
 {
   environment.systemPackages =  [
-    unstable.newelle
+   nixpkgs-unstable.legacyPackages.${pkgs.system}.newelle 
   ];
 }
