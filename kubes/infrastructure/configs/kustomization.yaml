@@ -1,4 +1,5 @@
 resources:
+  - auth
   - cnpg
   - certs
   - garage

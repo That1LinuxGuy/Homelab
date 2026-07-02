@@ -2,8 +2,11 @@
   description = "Master flake to manage host machines configurations";
 
   inputs = {
-    # NixOS official package source, using the nixos-25.11 branch here
+    # NixOS official package source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+
+    # NixOS unstable package source
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {
@@ -55,6 +58,7 @@
           ./modules/common/vim.nix
           ./modules/niri/niri.nix
           ./modules/plasma/plasma.nix
+          ./modules/unstable/packages.nix
         ];
       };
     };

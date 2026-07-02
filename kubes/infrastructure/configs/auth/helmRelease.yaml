@@ -1,0 +1,55 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: authentik
+  namespace: authentik
+spec:
+  interval: 12h
+  chart:
+    spec:
+      chart: my-authentik
+      version: "2026.5.x"
+      sourceRef:
+        kind: HelmRepository
+        name: goauthentik
+        namespace: flux-system
+
+  values:
+    authentik:
+      existingSecret:
+        secretName: auth-secret
+
+      postgresql:
+        host: "authentik-postgresql"
+        name: "authentik"
+        user: "authentik"
+        secretRef:
+          name: auth-pass
+          something: password
+        port: 5432
+
+    server:
+      autoscaling:
+        enabled: true
+
+      resources:
+        requests:
+          cpu: 100m
+          memory: 512Mi
+        limits:
+          cpu: 500m
+          memory: 1Gi
+
+      metrics:
+        enabled: true
+        servicemonitor:
+          enabled: true
+
+    worker:
+      autoscaling:
+        enabled: true    
+
+      metrics:
+        enabled: true
+        servicemonitor:
+          enabled: true
