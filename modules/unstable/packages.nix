@@ -2,7 +2,7 @@
 
 # Any latest version packages I may need
 let
-  unstable = import inputs.nixpkgs-unstable
+  unstable = import inputs.nixpkgs-unstable;
 in
 
 {
