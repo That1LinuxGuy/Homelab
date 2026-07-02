@@ -100,10 +100,9 @@
     hugo
     vesktop
     brave
-    newelle
     collabora-desktop
     krita
-    element-web
+    fractal
   ];
 
   # List services that you want to enable:
