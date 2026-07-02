@@ -1,4 +1,4 @@
-{ pkgs, self, nixpkgs-unstable, ... }: 
+{ pkgs, self, unstable, ... }: 
 
 # Any latest version packages I may need
 
