@@ -3,15 +3,8 @@
 # Niri configuration with noctalia-shell
 
 {
+  services.displayManager.gdm.enable = true;
   programs.niri.enable = true;
-
-  services.displayManager.sddm = {
-    enable = true;
-    wayland = {
-      enable = true;
-      compositor = "kwin";
-    };
-  };
   
   environment.systemPackages = with pkgs; [
   noctalia-shell
