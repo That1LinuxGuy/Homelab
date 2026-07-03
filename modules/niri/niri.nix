@@ -1,4 +1,4 @@
-{ pkgs, config, unstable, ... }:
+{ pkgs, config, inputs, ... }:
 
 # Niri configuration with noctalia-shell
 
