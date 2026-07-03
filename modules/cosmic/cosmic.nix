@@ -4,7 +4,9 @@
 
 {
   # Enable the Cosmic Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.enable = false;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "sddm-astronaut-theme";
+    extraPackages = [pkgs.sddm-astronaut];
   services.desktopManager.cosmic.enable = true;
 }

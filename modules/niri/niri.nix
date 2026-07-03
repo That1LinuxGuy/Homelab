@@ -3,8 +3,12 @@
 # Niri configuration with noctalia-shell
 
 {
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.enable = false;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "sddm-astronaut-theme";
+    extraPackages = [pkgs.sddm-astronaut];
+  };
+
   programs.niri.enable = true;
   
   environment.systemPackages = with pkgs; [
@@ -15,6 +19,7 @@
   mpvpaper
   swaylock
   nautilus
+  sddm-astronaut
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
