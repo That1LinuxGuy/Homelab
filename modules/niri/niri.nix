@@ -5,7 +5,11 @@
 {
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    };
+    
     theme = "sddm-astronaut-theme";
     extraPackages = [pkgs.sddm-astronaut];
   };
