@@ -11,8 +11,17 @@
       compositor = "kwin":
     };
     
-    theme = "breeze";
+    theme = "sddm-astronaut-theme";
     extraPackages = [pkgs.sddm-astronaut];
+    
+    settings = {
+      Theme = {
+        CursorTheme = "breeze_cursors";
+        CursorSize = 24:
+      };
+    };
+  };
+
   services.desktopManager.cosmic.enable = true;
 
   environment.systemPackages = with pkgs; [

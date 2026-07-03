@@ -12,6 +12,13 @@
     
     theme = "sddm-astronaut-theme";
     extraPackages = [pkgs.sddm-astronaut];
+
+    settings = {
+      Theme = {
+        CursorTheme = "breeze_cursors";
+        CursorSize = 24:
+      };
+    };
   };
 
   programs.niri.enable = true;
