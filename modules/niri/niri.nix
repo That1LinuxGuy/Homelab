@@ -4,18 +4,7 @@
 
 {
 
-  programs.noctalia-greeter = {
-    enable = true;
-
-    settings = {
-      cursor = {
-        theme = "Adwaita";
-        size = 24;
-        package = pkgs.adwaita-icon-theme;
-      };
-    };
-  };
-
+  services.displayManager.sddm.enable = true;
   programs.niri.enable = true;
   
   environment.systemPackages = with pkgs; [
