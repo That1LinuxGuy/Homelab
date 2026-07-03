@@ -7,6 +7,12 @@
 
     # NixOS unstable package source
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
+    # Noctalia-shell flake
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/legacy-v4";
+      inputs.nixpkgs.follows = "unstable";
+    }; 
   };
 
   outputs = { self, nixpkgs, unstable, ... }@inputs: {
@@ -51,7 +57,7 @@
       # work laptop | pokedex 025
       pikachu = nixpkgs.lib.nixosSystem { 
         system = "x86_64-linux";
-        specialArgs = { inherit unstable; };
+        specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pikachu/pikachu.nix
           ./modules/common/default.nix
