@@ -18,7 +18,8 @@
   device = "/dev/disk/by-uuid/aecb8201-43b8-40bd-912a-d40661b3ca26";
   crypttabExtraOpts = [ "tpm2-device=auto" ];
   };
-  
+ 
+  hardware.bluetooth.enable = true; 
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -52,6 +53,7 @@
   services.pcscd.enable = true;
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+  services.upower.enable = true;
   services.ollama = {
     enable = true;
     loadModels = [ "gemma3:1b" ];

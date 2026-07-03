@@ -3,23 +3,17 @@
 # Niri configuration with noctalia-shell
 
 {
-  services.displayManager.sddm = {
-    enable = true;
-    wayland = {
-      enable = true;
-      compositor = "kwin";
-    };
-    
-    theme = "sddm-astronaut-theme";
-    extraPackages = [pkgs.sddm-astronaut];
+
+  services.displayManager.noctalia-greeter = {
+    enable = true:
 
     settings = {
-      Theme = {
-        CursorTheme = "breeze_cursors";
-        CursorSize = 24;
+      cursor = {
+        theme = "Adwaita";
+        size = 24;
+        package = pkgs.adwaita-icon-theme;
       };
     };
-  };
 
   programs.niri.enable = true;
   

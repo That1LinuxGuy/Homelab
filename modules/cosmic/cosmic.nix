@@ -3,28 +3,16 @@
 # Cosmic DE configuration
 
 {
-  # Enable the Cosmic Desktop Environment.
-  services.displayManager.sddm = {
-    enable = true;
-    wayland = {
-      enable = true;
-      compositor = "kwin";
-    };
-    
-    theme = "sddm-astronaut-theme";
-    extraPackages = [pkgs.sddm-astronaut];
-    
+  services.displayManager.noctalia-greeter = {
+    enable = true:
+
     settings = {
-      Theme = {
-        CursorTheme = "breeze_cursors";
-        CursorSize = 24;
+      cursor = {
+        theme = "Adwaita";
+        size = 24;
+        package = pkgs.adwaita-icon-theme;
       };
     };
-  };
 
   services.desktopManager.cosmic.enable = true;
-
-  environment.systemPackages = with pkgs; [
-  sddm-astronaut
-  ];
 }
