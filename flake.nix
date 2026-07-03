@@ -58,7 +58,7 @@
           ./modules/common/network.nix
           ./modules/common/vim.nix
           ./modules/niri/niri.nix
-          ./modules/plasma/plasma.nix
+          ./modules/cosmic/cosmic.nix
           ./modules/unstable/packages.nix
         ];
       };
