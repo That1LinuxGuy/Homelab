@@ -5,7 +5,7 @@
 {
   programs.niri.enable = true;
 
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = true;
   
   environment.systemPackages = with pkgs; [
   noctalia-shell
@@ -19,4 +19,8 @@
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
   systemd.user.services.niri.enableDefaultPath = false;
+
+  services.xserver = {
+    enable = false;
+  };
 }
