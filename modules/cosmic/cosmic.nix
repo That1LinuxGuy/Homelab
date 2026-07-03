@@ -4,8 +4,13 @@
 
 {
   # Enable the Cosmic Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland = {
+      enable = true;
+      compositor = "kwin"
+    };
+  };
 
   services.desktopManager.cosmic.enable = true;
 }
