@@ -68,7 +68,7 @@
           ./hosts/pikachu/pikachu.nix
           ./modules/common/default.nix
           ./modules/common/network.nix
-          ./modules/common/vim.nix
+          ./modules/common/home.nix
           ./modules/niri/niri.nix
           # ./modules/cosmic/cosmic.nix
           ./modules/unstable/packages.nix
