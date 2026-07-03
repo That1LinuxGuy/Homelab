@@ -1,4 +1,4 @@
-{ pkgs, self, unstable, ... }: 
+{ pkgs, self, inputs, ... }: 
 
 # Any latest version packages I may need
 
