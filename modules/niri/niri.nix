@@ -16,7 +16,7 @@
     settings = {
       Theme = {
         CursorTheme = "breeze_cursors";
-        CursorSize = 24:
+        CursorSize = 24;
       };
     };
   };

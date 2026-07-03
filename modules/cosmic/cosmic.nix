@@ -8,7 +8,7 @@
     enable = true;
     wayland = {
       enable = true;
-      compositor = "kwin":
+      compositor = "kwin";
     };
     
     theme = "sddm-astronaut-theme";
@@ -17,7 +17,7 @@
     settings = {
       Theme = {
         CursorTheme = "breeze_cursors";
-        CursorSize = 24:
+        CursorSize = 24;
       };
     };
   };
