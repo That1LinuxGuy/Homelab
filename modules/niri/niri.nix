@@ -14,6 +14,7 @@
         package = pkgs.adwaita-icon-theme;
       };
     };
+  };
 
   programs.niri.enable = true;
   

@@ -13,6 +13,7 @@
         package = pkgs.adwaita-icon-theme;
       };
     };
+  };
 
   services.desktopManager.cosmic.enable = true;
 }
