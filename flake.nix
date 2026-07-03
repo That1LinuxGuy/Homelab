@@ -8,6 +8,12 @@
     # NixOS unstable package source
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # NixOS Home Manager
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Noctalia-shell flake
     noctalia = {
       url = "github:noctalia-dev/noctalia/legacy-v4";
@@ -15,7 +21,7 @@
     }; 
   };
 
-  outputs = { self, nixpkgs, unstable, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
 
      # master node | pokedex 001
@@ -66,6 +72,7 @@
           ./modules/niri/niri.nix
           # ./modules/cosmic/cosmic.nix
           ./modules/unstable/packages.nix
+          home-manager.nixosModules.home-manager
         ];
       };
     };
