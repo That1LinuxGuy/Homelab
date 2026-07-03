@@ -4,6 +4,6 @@
 
 {
   environment.systemPackages =  [
-   unstable.legacyPackages.${pkgs.system}.newelle 
+   inputs.unstable.legacyPackages.${pkgs.system}.newelle 
   ];
 }
