@@ -12,7 +12,7 @@
   programs.niri.enable = true;
   
   environment.systemPackages = with pkgs; [
-  inputs.noctalia.legacyPackages.${pkgs.system}.default
+  inputs.noctalia.packages.${pkgs.system}.default
   xwayland-satellite
   alacritty
   fuzzel
