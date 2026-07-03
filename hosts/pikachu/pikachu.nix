@@ -37,6 +37,9 @@
 
   networking.hostName = "pikachu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.mcallen = import ./home.nix;
 
   # Enable networking
   networking.networkmanager.enable = true;

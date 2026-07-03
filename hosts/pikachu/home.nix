@@ -1,13 +1,15 @@
 
 { config, pkgs, inputs, ... }:
 
-{  
+{
+  home.stateVersion = "26.05";
+  home.sessionVariables = {
+    EDITOR = "vim";
+    FLAKE = "$HOME/Projects/homelab";
+  }; 
+  
   programs.bash = {
     enable = true;
-      sessionVariables = {
-      EDITOR = "vim";
-      FLAKE = "$HOME/Projects/homelab";
-    }; 
     shellAliases = {
       # nixos commands
       "sysrb" = "sudo nixos-rebuild switch --flake ~/Projects/homelab#pikachu";
@@ -38,20 +40,15 @@
   programs.vim = {
     enable = true;
     settings = {
-      "nocompatible" = true;
       "number" = true;
       "relativenumber" = true;
-      "hlsearch" = true;
-      "incsearch" = true;
-      "synax on" = true;
       "expandtab" = true;
       "tabstop" = 2;
       "shiftwidth" = 4;
     };
     plugins = with pkgs.vimPlugins; [
-      sensible
+      vim-sensible
       vim-airline
-      fugutive
       vim-go
     ];
   };
