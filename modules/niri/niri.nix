@@ -5,8 +5,8 @@
 {
   programs.niri.enable = true;
 
-  services.displayManager.sddm.enable = true;
-
+  services.displayManager.sddm.wayland.enable = true;
+  
   environment.systemPackages = with pkgs; [
   noctalia-shell
   xwayland-satellite
