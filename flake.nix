@@ -72,7 +72,7 @@
           ./modules/niri/niri.nix
           # ./modules/cosmic/cosmic.nix
           ./modules/unstable/packages.nix
-          home-manager.nixosModules.home-manager
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
     };
