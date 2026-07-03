@@ -19,14 +19,13 @@
   programs.niri.enable = true;
   
   environment.systemPackages = with pkgs; [
-  noctalia-shell
+  noctalia.legacyPackages.${pkgs.system}.default
   xwayland-satellite
   alacritty
   fuzzel
   mpvpaper
   swaylock
   nautilus
-  sddm-astronaut
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
