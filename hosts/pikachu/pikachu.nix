@@ -54,7 +54,7 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.upower.enable = true;
-  services.power-profiles-daemon.enable
+  services.power-profiles-daemon.enable = true;
   services.ollama = {
     enable = true;
     loadModels = [ "gemma3:1b" ];
