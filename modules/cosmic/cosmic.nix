@@ -3,7 +3,7 @@
 # Cosmic DE configuration
 
 {
-  services.displayManager.noctalia-greeter = {
+  programs.noctalia-greeter = {
     enable = true;
 
     settings = {
