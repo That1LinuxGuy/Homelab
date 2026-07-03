@@ -10,7 +10,7 @@
 
     # NixOS Home Manager
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -68,7 +68,6 @@
           ./hosts/pikachu/pikachu.nix
           ./modules/common/default.nix
           ./modules/common/network.nix
-          ./modules/common/home.nix
           ./modules/niri/niri.nix
           # ./modules/cosmic/cosmic.nix
           ./modules/unstable/packages.nix
