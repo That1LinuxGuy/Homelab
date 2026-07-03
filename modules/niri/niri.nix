@@ -3,7 +3,8 @@
 # Niri configuration with noctalia-shell
 
 {
-  services.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.enable = false;
   programs.niri.enable = true;
   
   environment.systemPackages = with pkgs; [
