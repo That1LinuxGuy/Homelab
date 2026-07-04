@@ -1,19 +1,14 @@
-{ pkgs, config, ... }:
+{ pkgs, config, inputs, ... }:
 
 # Cosmic DE configuration
 
 {
-  programs.noctalia-greeter = {
+  imports = [
+    ../sddm/sddm.nix
+  ];
+  
+  services.desktopManager.cosmic = {
     enable = true;
-
-    settings = {
-      cursor = {
-        theme = "Adwaita";
-        size = 24;
-        package = pkgs.adwaita-icon-theme;
-      };
-    };
+    xwayland.enable = true;
   };
-
-  services.desktopManager.cosmic.enable = true;
 }

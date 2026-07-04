@@ -3,11 +3,9 @@
 # Niri configuration with noctalia-shell
 
 {
-
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
+  import = [
+    ../sddm/sddm.nix
+  ];
 
   programs.niri.enable = true;
   

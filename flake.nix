@@ -69,7 +69,7 @@
           ./modules/common/default.nix
           ./modules/common/network.nix
           ./modules/niri/niri.nix
-          # ./modules/cosmic/cosmic.nix
+          ./modules/cosmic/cosmic.nix
           ./modules/unstable/packages.nix
           inputs.home-manager.nixosModules.home-manager
         ];
