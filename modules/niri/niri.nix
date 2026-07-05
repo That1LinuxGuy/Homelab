@@ -3,7 +3,7 @@
 # Niri configuration with noctalia-shell
 
 {
-  import = [
+  imports = [
     ../sddm/sddm.nix
   ];
 

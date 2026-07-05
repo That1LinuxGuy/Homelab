@@ -5,19 +5,26 @@
 {
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true;
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    };
   
-    theme = "elegant-sddm";
+    theme = "sddm-astronaut-theme";
     settings = {
       Theme= {
-        CursorTheme = "COSMIC";
+        CursorTheme = "Bibata-Modern-Ice";
         CursorSize = 24;
       };
     };
+    extraPackages = with pkgs; [
+      sddm-astronaut
+      bibata-cursors
+    ];
   };
 
   environment.systemPackages = with pkgs; [
-    elegant-sddm
-    cosmic-icons
+    sddm-astronaut
+    bibata-cursors
   ];
 }
