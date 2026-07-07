@@ -20,16 +20,17 @@ spec:
       publicUrl: "noco.713602.xyz"
       dashboardUrl: "noco-db.713602.xyz"
 
-  externalDatabase:
-    host: noco-rw.noco-db.svc.cluster.local
-    port: 5432
-    database: noco
-    username: noco
-    existingSecret: noco-secret
+    externalDatabase:
+      host: noco-rw.noco-db.svc.cluster.local
+      port: 5432
+      database: noco
+      username: noco
+      existingSecret: noco-secret
 
-  externalRedis:
-    
-  persistence:
-    enabled: true
-    storageClass: longhorn-single
-    size: 10Gi
+    externalRedis:
+      existingSecret: noco-secret
+      
+    persistence:
+      enabled: true
+      storageClass: longhorn-single
+      size: 10Gi
