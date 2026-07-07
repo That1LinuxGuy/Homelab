@@ -7,7 +7,7 @@ There are only 3 folders, each with a very specific purpose
 
 ## basic configuration map
 
-![Alt text](/kubes/docs/img/architecture.png)
+![Homelab architecture](https://github.com/That1LinuxGuy/Homelab/blob/main/docs/img/architecture.png)
 
 ## clusters
 
