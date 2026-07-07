@@ -7,7 +7,7 @@ There are only 3 folders, each with a very specific purpose
 
 ## basic configuration map
 
-![Alt text](../docs/img/architecture.png)
+![Alt text](/kubes/docs/img/architecture.png)
 
 ## clusters
 
