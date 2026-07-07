@@ -21,7 +21,7 @@ spec:
       dashboardUrl: "noco-db.713602.xyz"
 
   externalDatabase:
-    host: noco-rw.
+    host: noco-rw.noco-db.svc.cluster.local
     port: 5432
     database: noco
     username: noco
@@ -33,7 +33,3 @@ spec:
     enabled: true
     storageClass: longhorn-single
     size: 10Gi
-
-  monitoring:
-    sentry:
-      enabled: true
