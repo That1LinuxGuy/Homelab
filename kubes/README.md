@@ -5,13 +5,17 @@ There are only 3 folders, each with a very specific purpose
 - infrastructure | contains all the applications that I need to support user facing content
 - apps | contains all the user facing applications
 
+## basic configuration map
+
+![Alt text](../docs/img/architecture.png)
+
 ## clusters
 
 There is only one cluster currently in this directory. 
 
 All of the infrastructure is managaed collectively inside [infrastcructure.yaml](clusters/infrastructure.yaml)
 
-Each application has it's own self-contained file so if one app fails, none of the other will. For example, [jellyfin.yaml](clusters/jellyfin.yaml)
+Each application has it's own self-contained file so if one app fails, none of the other will. For example, [ocis.yaml](clusters/ocis.yaml)
 
 ## infrastructure
 
