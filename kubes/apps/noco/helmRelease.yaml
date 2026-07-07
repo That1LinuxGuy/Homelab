@@ -11,7 +11,7 @@ spec:
       chart: nocodb
       interval: 30m
       sourceRef:
-        kind: ICORepository
+        kind: OCIRepository
         name: noco-db
         namespace: flux-system
 
