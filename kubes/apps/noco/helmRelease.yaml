@@ -1,4 +1,3 @@
-
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
@@ -9,9 +8,9 @@ spec:
   chart:
     spec:
       chart: nocodb
-      interval: 30m
+      version: "1.x"
       sourceRef:
-        kind: OCIRepository
+        kind: HelmRepository
         name: noco-db
         namespace: flux-system
 
