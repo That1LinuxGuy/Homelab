@@ -24,10 +24,10 @@ spec:
       port: 5432
       database: noco
       username: noco
-      existingSecret: noco-secret
+      existingSecret: noco-secrets
 
     externalRedis:
-      existingSecret: noco-secret
+      existingSecret: noco-secrets
       
     persistence:
       enabled: true
