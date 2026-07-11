@@ -26,10 +26,10 @@
     "--node-label storage=ssd"
     "--node-label capacity=low"
     "--node-label ram=24gb"
+
+    # Enable s3 backups for etcd
     "--etcd-s3"
-    "--etcd-s3-endpoint=s3.us-east-005.backblazeb2.com"
-    "--etcd-s3-bucket=k3s-home-etcd-backup"
-    "--etcd-s3-retention=10"
+    "--etcd-s3-config-secret=etcd-backup-secret"
   ];
     environment.variables = {
   KUBECONFIG = "/etc/rancher/k3s/k3s.yaml";
