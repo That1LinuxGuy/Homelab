@@ -3,3 +3,7 @@
 
 # don't commit backup files
 *.swp
+
+# don't commit tfstate
+*.tfstate
+*.tfstate.backup
