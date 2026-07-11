@@ -109,6 +109,7 @@
     collabora-desktop
     krita
     fractal
+    terraform
   ];
 
   # List services that you want to enable:
