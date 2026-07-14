@@ -87,16 +87,11 @@
     enable = true;
     policies = {
       SecurityDevices = {
-        Add = {"p11-kit-proxy" = "${pkgs.p11-kit}/lib/p11-kit-proxy.so"; };
+        Add = {"CAC card" = "${pkgs.opensc}/lib/opensc-pkcs11.so"; };
       };
     };
   };
  
-  # configure pksc11 to use opensc 
-  environment.etc."pkcs11/modules/opensc-pkcs11".text = ''
-    module: ${pkgs.opensc}/lib/opensc-pkcs11.so
-  '';
-
   environment.systemPackages = with pkgs; [
     kubectl
     fluxcd
