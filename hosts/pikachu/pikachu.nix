@@ -85,6 +85,8 @@
   # Install firefox.
   programs.firefox = {
     enable = true;
+
+    # enable opensc in firefox for CAC card use
     policies = {
       SecurityDevices = {
         Add = {"CAC card" = "${pkgs.opensc}/lib/opensc-pkcs11.so"; };
