@@ -103,6 +103,7 @@
     opensc
     ccid
     pcsc-tools
+    p11-kit
     hugo
     vesktop
     brave
