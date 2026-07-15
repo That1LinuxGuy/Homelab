@@ -24,3 +24,14 @@ resource "b2_bucket" "etcd_bucket" {
   }
 }
 
+resource "b2_application_key" "k3s_etcd_backup_key" {
+  key_name = "etcd-backup-key"
+  bucket_ids = [b2_bucket.etcd_bucket.id]
+
+  capabilities = [
+    "readFiles",
+    "writeFiles",
+    "deleteFiles",
+    "listAllBucketNames"
+  ]
+}
