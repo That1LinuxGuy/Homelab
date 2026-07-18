@@ -100,14 +100,13 @@
     opensc
     ccid
     pcsc-tools
-    p11-kit
     hugo
     vesktop
     brave
     collabora-desktop
-    krita
     fractal
     terraform
+    mediawriter
   ];
 
   # List services that you want to enable:
