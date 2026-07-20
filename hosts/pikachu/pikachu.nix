@@ -103,10 +103,8 @@
     hugo
     vesktop
     brave
-    collabora-desktop
     fractal
     terraform
-    mediawriter
   ];
 
   # List services that you want to enable:
