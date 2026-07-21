@@ -95,16 +95,21 @@
   };
  
   environment.systemPackages = with pkgs; [
-    kubectl
-    fluxcd
+    # CAC card tools
     opensc
     ccid
     pcsc-tools
+    # Server tools
+    kubectl
+    fluxcd
+    terraform
+    # Other tools
     hugo
-    vesktop
     brave
     fractal
-    terraform
+    # Not tools
+    vesktop
+    moonlight-qt
   ];
 
   # List services that you want to enable:
