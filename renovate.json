@@ -1,6 +1,54 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":dependencyDashboard"
+  ],
+  "schedule": ["after 6am and before 10am on Monday"],
+  "timezone": "UTC",
+  "labels": ["dependencies", "renovate"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+
+  "flux": {
+    "fileMatch": [
+      "(^|/)apps/.+\\.ya?ml$",
+      "(^|/)clusters/.+\\.ya?ml$",
+      "(^|/)infrastructure/.+\\.ya?ml$"
+    ]
+  },
+  "helm-values": {
+    "fileMatch": [
+      "(^|/)helm-values/.+\\.ya?ml$"
+    ]
+  },
+
+  "packageRules": [
+    {
+      "description": "Group Flux system updates together",
+      "matchPackageNames": ["fluxcd/flux2", "flux2"],
+      "groupName": "flux-system",
+      "automerge": false,
+      "labels": ["flux", "dependencies"]
+    },
+    {
+      "description": "Auto-merge patch updates for non-critical infrastructure",
+      "matchUpdateTypes": ["patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "labels": ["patch", "dependencies"]
+    },
+    {
+      "description": "Require manual review for major updates",
+      "matchUpdateTypes": ["major"],
+      "labels": ["major-update", "requires-review"],
+      "automerge": false
+    },
+    {
+      "description": "Group cert-manager updates",
+      "matchPackageNames": ["cert-manager"],
+      "groupName": "cert-manager",
+      "schedule": ["at any time"]
+    }
   ]
 }
