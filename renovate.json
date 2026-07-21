@@ -4,8 +4,8 @@
     "config:recommended",
     ":dependencyDashboard"
   ],
-  "schedule": ["after 6am and before 10am on Monday"],
-  "timezone": "UTC",
+  "schedule": ["at 10am on Sunday"],
+  "timezone": "America/Chicago",
   "labels": ["dependencies", "renovate"],
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
