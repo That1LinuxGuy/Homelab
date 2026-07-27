@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ./vim.nix
+  ];
+
   home.username = "mcallen";
   home.homeDirectory = "/home/mcallen";
   home.stateVersion = "26.05";
