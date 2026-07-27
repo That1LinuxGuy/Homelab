@@ -75,5 +75,17 @@
         ];
       };
     };
+
+    homeConfigurations = {
+      #ARM Chromebook | pokedex 029
+      "mcallen@nidoran" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-linux;
+	extraSpecialArgs = {inherit inputs; };
+	modules = [
+	  ./hosts/nidoran/home.nix
+	  ./modules/common/vim.nix
+	];
+      };
+    };
   };
 }
