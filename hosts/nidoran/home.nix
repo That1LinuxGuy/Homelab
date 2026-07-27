@@ -6,10 +6,11 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
-    fuzzel
+    rofi 
     mako
     waybar
     swaybg
+    openssh
   ];
 
   programs.home-manager.enable = true;
