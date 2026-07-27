@@ -83,7 +83,6 @@
 	extraSpecialArgs = {inherit inputs; };
 	modules = [
 	  ./hosts/nidoran/home.nix
-	  ./modules/common/vim.nix
 	];
       };
     };
