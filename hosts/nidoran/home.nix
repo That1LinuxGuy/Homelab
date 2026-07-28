@@ -2,8 +2,11 @@
 
 {
   imports = [
+    ./alacritty.nix
     ./vim.nix
     ./bash.nix
+    ./waybar.nix
+    ./mako.nix
   ];
 
   home.username = "mcallen";
@@ -27,4 +30,12 @@
   ];
 
   programs.home-manager.enable = true;
+  programs.chromium = {
+    enable = true;
+    package = pkgs.brave.override {
+      commandLineArgs = [
+        "--ozone-platform=wayland"
+      ];
+    };
+  };
 }
