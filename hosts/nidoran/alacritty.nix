@@ -3,6 +3,7 @@
 {
   programs.alacritty = {
     enable = true;
+    package = null;
 
     settings = {
       window = {
@@ -15,3 +16,4 @@
       };
     };
   };
+}

@@ -6,7 +6,6 @@
     ./vim.nix
     ./bash.nix
     ./waybar.nix
-    ./mako.nix
   ];
 
   home.username = "mcallen";
