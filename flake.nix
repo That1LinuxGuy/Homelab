@@ -21,7 +21,7 @@
     }; 
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
 
      # master node | pokedex 001
@@ -73,6 +73,17 @@
           ./modules/unstable/packages.nix
           inputs.home-manager.nixosModules.home-manager
         ];
+      };
+    };
+
+    homeConfigurations = {
+      #ARM Chromebook | pokedex 029
+      "mcallen@nidoran" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.aarch64-linux;
+	extraSpecialArgs = {inherit inputs; };
+	modules = [
+	  ./hosts/nidoran/home.nix
+	];
       };
     };
   };
