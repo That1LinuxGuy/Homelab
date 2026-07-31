@@ -10,7 +10,7 @@
       "github.com" = {
         hostname = "github.com";
         user = "git"; 
-        identityFile = "~/.ssh/.chrome.pub";
+        identityFile = "~/.ssh/chrome";
         identitiesOnly = true;
       };
     };
