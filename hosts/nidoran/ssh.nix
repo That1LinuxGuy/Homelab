@@ -4,12 +4,13 @@
 {
   programs.ssh= {
     enable = true;
+    enableDefaultConfig = false;
   
-    matchBlocks = {
+    settings = {
       "github.com" = {
         hostname = "github.com";
         user = "git"; 
-        identityFile = "~/.ssh/.chrome.pub;
+        identityFile = "~/.ssh/.chrome.pub";
         identitiesOnly = true;
       };
     };

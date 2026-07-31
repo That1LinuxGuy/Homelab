@@ -6,6 +6,7 @@
     ./vim.nix
     ./bash.nix
     ./waybar.nix
+    ./ssh.nix
   ];
 
   home.username = "mcallen";
@@ -26,6 +27,7 @@
     waybar
     swaybg
     openssh
+    fastfetch
   ];
 
   programs.home-manager.enable = true;
