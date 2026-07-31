@@ -52,6 +52,11 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
   services.tailscale.enable = true;
   services.pcscd.enable = true;
   services.gvfs.enable = true;
