@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ./alacritty.nix
-    ./vim.nix
-    ./bash.nix
+    ../home/alacritty.nix
+    ../home/vim.nix
+    ../home/bash.nix
+    ../home/ssh.nix
     ./waybar.nix
-    ./ssh.nix
   ];
 
   home.username = "mcallen";

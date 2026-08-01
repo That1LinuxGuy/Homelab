@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 
+# Dot 1 (Primary Violet): #A073F0
+# Dot 2 (Medium Purple): #B982F5
+# Dot 3 (Light Lilac): #D7AFFA
+# Dot 4 (Accent Pink): #F573A0
+
 {
   programs.waybar = {
     enable = true;
