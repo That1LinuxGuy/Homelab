@@ -15,7 +15,7 @@
 
       "*.spangled-vibes.ts.net" = {
         user = "mcallen";
-        identityFile = "./.ssh/bazzite";
+        identityFile = "~/.ssh/bazzite";
         identitiesOnly = true;
       };
     };
