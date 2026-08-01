@@ -8,9 +8,14 @@
   
     settings = {
       "github.com" = {
-        hostname = "github.com";
-        user = "git"; 
-        identityFile = "~/.ssh/.chrome.pub";
+        user = "mcallen"; 
+        identityFile = "~/.ssh/bazzite-git";
+        identitiesOnly = true;
+      };
+
+      "*.spangled-vibes.ts.net" = {
+        user = "mcallen";
+        identityFile = "./.ssh/bazzite";
         identitiesOnly = true;
       };
     };
