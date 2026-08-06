@@ -75,6 +75,21 @@
         ];
       };
     };
+ 
+      # work laptop | pokedex 243
+      raikou = nixpkgs.lib.nixosSystem { 
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/raikou/raikou.nix
+          ./modules/common/default.nix
+          ./modules/common/network.nix
+          ./modules/niri/niri.nix
+          ./modules/unstable/packages.nix
+          inputs.home-manager.nixosModules.home-manager
+        ];
+      };
+    };
 
     homeConfigurations = {
       #ARM Chromebook | pokedex 029
