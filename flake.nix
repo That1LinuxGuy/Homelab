@@ -24,15 +24,12 @@
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
     nixosConfigurations = {
 
-     # master node | pokedex 001
-     bulbasaur = nixpkgs.lib.nixosSystem {
+      # master node | pokedex 001
+      bulbasaur = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/bulbasaur/bulbasaur.nix
-          ./modules/common/default.nix
-          ./modules/common/vim.nix
-          ./modules/common/network.nix
-          ./modules/k3s/k3s-master.nix
+          ./modules/master.nix
         ];
       };
 
@@ -41,10 +38,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/squirtle/squirtle.nix
-          ./modules/common/default.nix
-          ./modules/common/vim.nix
-          ./modules/common/network.nix
-          ./modules/k3s/k3s-server.nix
+          ./modules/server.nix
         ];
       };
 
@@ -53,10 +47,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/charmander/charmander.nix
-          ./modules/common/default.nix
-          ./modules/common/vim.nix
-          ./modules/common/network.nix
-          ./modules/k3s/k3s-server.nix
+          ./modules/server.nix
         ];
       };
 
@@ -66,15 +57,10 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pikachu/pikachu.nix
-          ./modules/common/default.nix
-          ./modules/common/network.nix
-          ./modules/niri/niri.nix
-          ./modules/cosmic/cosmic.nix
-          ./modules/unstable/packages.nix
+          ./modules/laptop.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };
-    };
  
       # work laptop | pokedex 243
       raikou = nixpkgs.lib.nixosSystem { 
@@ -82,10 +68,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/raikou/raikou.nix
-          ./modules/common/default.nix
-          ./modules/common/network.nix
-          ./modules/niri/niri.nix
-          ./modules/unstable/packages.nix
+          ./modules/laptop.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };

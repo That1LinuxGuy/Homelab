@@ -2,7 +2,7 @@
 
 {  
   # Bootloader.
-  boot.kernelModules = [ "iscsi_tcp" "libiscsi" ];
+  boot.kernelModules = [];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   
@@ -23,41 +23,6 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.mcallen = {
-    isNormalUser = true;
-    description = "mcallen";
-    extraGroups = [ "networkmanager" "wheel" "k3s" ];
-    linger = true;
-    packages = with pkgs; [];
-  };
-
-  users.groups.k3s = {}; # This creates the group
-
-  systemd.services.iscsid.serviceConfig = {
-    PrivateMounts = "no";
-    BindPaths = "/run/current-system/sw/bin:/bin";
-    TimeoutStartSec = "30";
-  };
-
-  systemd.tmpfiles.rules = [
-    # Create a symbolic link /usr/bin/mount -> /run/current-system/sw/bin/mount
-    "L /usr/bin/mount - - - - /run/current-system/sw/bin/mount"
-  ];
-
-  # Enable git with global config
-  programs.git = {
-    enable = true;
-    config = {
-      user = {
-        name = "That1LinuxGuy";
-        email = "mcallen71398@gmail.com";
-      };
-      init.defaultBranch = "main";
-    };
-  };
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -91,22 +56,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    wget
-    openiscsi
     git
-    fluxcd
     fastfetch
-    yaml-language-server
-    sops
-    age
-    gnupg
-    (wrapHelm kubernetes-helm {
-        plugins = with pkgs.kubernetes-helmPlugins; [
-          helm-secrets
-          helm-diff
-          helm-s3
-          helm-git
-        ];
-      })
   ];
 }

@@ -9,10 +9,13 @@
     isNormalUser = true;
     description = "mcallen";
     extraGroups = [ "networkmanager" "wheel" "k3s" ];
+    linger = true;
     packages = with pkgs; [
       kdePackages.kate
       vim
       git
     ];
   };
+
+  users.groups.k3s = {}; 
 }
