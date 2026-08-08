@@ -8,7 +8,7 @@
   users.users."mcallen" = {
     isNormalUser = true;
     description = "mcallen";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "k3s" ];
     packages = with pkgs; [
       kdePackages.kate
       vim
