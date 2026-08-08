@@ -9,7 +9,10 @@
     settings = {
       "github.com" = {
         user = "mcallen"; 
-        identityFile = "~/.ssh/bazzite-git";
+        identityFile = [ 
+          "~/.ssh/bazzite-git"
+          "~/.ssh/raikou"
+        ]:
         identitiesOnly = true;
       };
 
