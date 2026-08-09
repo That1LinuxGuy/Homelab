@@ -72,6 +72,36 @@
           inputs.home-manager.nixosModules.home-manager
         ];
       };
+
+      # School 1 | pokedex 133
+      eevee = nixpkgs.lib.nixosSystem { 
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/eevee/eevee.nix
+          ./modules/school.nix
+        ];
+      };
+      
+      # School 2 | pokedex 134
+      vaporeon = nixpkgs.lib.nixosSystem { 
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/vaporeon/vaporeon.nix
+          ./modules/school.nix
+        ];
+      };
+
+      # School 3 | pokedex 135
+      jolteon = nixpkgs.lib.nixosSystem { 
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/jolteon/jolteon.nix
+          ./modules/school.nix
+        ];
+      };
     };
 
     homeConfigurations = {
