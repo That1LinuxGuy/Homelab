@@ -48,7 +48,7 @@
   users.users."chatlotte" = {
     isNormalUser = true;
     description = "charlotte";
-    extraGroups = [ wheel ];
+    extraGroups = [];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
