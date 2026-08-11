@@ -28,7 +28,6 @@
   hardware.bluetooth = {
     enable = true;
   };
-  services.mpris-proxy.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -59,11 +58,8 @@
   users.users."charlotte" = {
     isNormalUser = true;
     description = "charlotte";
-    extraGroups = [];
+    extraGroups = [ "input" ];
     packages = with pkgs; [
-      kdePackages.kate
-      libreoffice
-      brave
     #  thunderbird
     ];
   };
