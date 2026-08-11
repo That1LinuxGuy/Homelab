@@ -20,6 +20,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  hardware.bluetooth.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -52,7 +53,7 @@
   users.users."shelby" = {
     isNormalUser = true;
     description = "shelby";
-    extraGroups = [  "networkmanager" "wheel" ];
+    extraGroups = [  "networkmanager" "wheel" "input" ];
     packages = with pkgs; [
       kdePackages.kate
       google-chrome
