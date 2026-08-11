@@ -25,6 +25,10 @@
     };
   };
   services.desktopManager.plasma6.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+  };
+  services.mpris-proxy.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
