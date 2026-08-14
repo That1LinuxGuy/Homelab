@@ -17,6 +17,7 @@
   mpvpaper
   swaylock
   nautilus
+  brightnessctl
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
