@@ -5,7 +5,7 @@
     enable = true;
     shellAliases = {
       # nixos commands
-      "sysrb" = "sudo nixos-rebuild switch --flake ~/Projects/homelab#pikachu";
+      "sysrb" = "sudo nixos-rebuild switch --flake ~/Projects/homelab#";
       "sysrh" = " home-manager switch --flake '.#mcallen@nidoran'";
       "sysgc" = "sudo nix-collect-garbage --delete-older-than";
       "b" = "ssh bulbasaur.spangled-vibes.ts.net";
