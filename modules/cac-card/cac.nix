@@ -1,4 +1,4 @@
-{ config, pkgs, ... }
+{ config, pkgs, ... }:
 
 # A single Nix flake to enable CAC card support in any browser.
 {  
@@ -11,7 +11,7 @@
   ];
 
   # Enable pcsc daemon for CAC card reader
-  serivces.pcscd.enable = true;
+  services.pcscd.enable = true;
 
   # Install firefox.
   programs.firefox = {
@@ -60,4 +60,4 @@
 #    '';
 #  };
 #  
-#}
+}

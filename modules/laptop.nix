@@ -8,6 +8,7 @@
     ./common/mcallen.nix
     ./common/network.nix
     ./common/print.nix
+    ./common/boot.nix
     ./niri/niri.nix
     ./unstable/packages.nix
   ];
