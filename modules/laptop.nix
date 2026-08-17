@@ -9,6 +9,7 @@
     ./common/network.nix
     ./common/print.nix
     ./common/boot.nix
+    ./common/fingerprint.nix
     ./niri/niri.nix
     ./unstable/packages.nix
   ];
