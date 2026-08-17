@@ -34,6 +34,7 @@
       intel-media-driver
       vpl-gpu-rt
       libva
+      intel-compute-runtime
     ];
   };
 
