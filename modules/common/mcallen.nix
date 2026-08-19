@@ -10,10 +10,6 @@
     description = "mcallen";
     extraGroups = [ "networkmanager" "wheel" "k3s" "scanner" "lp" ];
     linger = true;
-    packages = with pkgs; [
-      kdePackages.kate
-      vim
-      git
     ];
   };
 
