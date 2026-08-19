@@ -11,6 +11,5 @@
   # Optional: Automatically prompt for fingerprint in PAM (sudo, login, lockscreen)
   security.pam.services = {
     sudo.fprintAuth = true;
-    login.fprintAuth = true;
   };
 }
