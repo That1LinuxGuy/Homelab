@@ -7,6 +7,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
+    vim
     fastfetch
     brave
     libreoffice
