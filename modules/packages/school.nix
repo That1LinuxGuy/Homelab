@@ -16,6 +16,7 @@
     kdePackages.ktuberling
     kdePackages.kblocks
     kdePackages.klettres
+    kdePackages.skanpage
     zoom-us
   ];
 }

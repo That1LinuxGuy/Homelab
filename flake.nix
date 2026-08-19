@@ -69,6 +69,7 @@
         modules = [
           ./hosts/raikou/raikou.nix
           ./modules/laptop.nix
+          ./modules/cac-card/cac.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };
