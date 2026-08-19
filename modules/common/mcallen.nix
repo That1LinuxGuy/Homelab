@@ -10,7 +10,6 @@
     description = "mcallen";
     extraGroups = [ "networkmanager" "wheel" "k3s" "scanner" "lp" ];
     linger = true;
-    ];
   };
 
   users.groups.k3s = {}; 

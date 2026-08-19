@@ -18,5 +18,8 @@
       "tabstop" = 2;
       "shiftwidth" = 4;
     };
+    extraConfig = ''
+      syntax on
+    '';
   };
 }

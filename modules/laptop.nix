@@ -11,6 +11,6 @@
     ./common/boot.nix
     ./common/fingerprint.nix
     ./niri/niri.nix
-    ./unstable/packages.nix
+    ./packages/unstable.nix
   ];
 }
