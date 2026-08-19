@@ -53,7 +53,7 @@
   users.users."shelby" = {
     isNormalUser = true;
     description = "shelby";
-    extraGroups = [  "networkmanager" "wheel" "input" ];
+    extraGroups = [  "networkmanager" "wheel" "input" "scanner" "lp" ];
     packages = with pkgs; [
       kdePackages.kate
       google-chrome
