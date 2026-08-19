@@ -22,6 +22,6 @@
       name = "Canon-G3070-series";
       deviceURI = "socket://192.168.1.107:9100";
       model = "everywhere";
-    };
+    }
   ];
 }
