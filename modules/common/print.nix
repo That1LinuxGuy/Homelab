@@ -17,11 +17,4 @@
     extraBackends = [pkgs.sane-airscan];
   };
   services.udev.packages = [ pkgs.sane-airscan ];
-  hardware.printers.ensurePrinters = [
-    {
-      name = "Canon-G3070-series";
-      deviceUri = "socket://192.168.1.107:9100";
-      model = "everywhere";
-    }
-  ];
 }
