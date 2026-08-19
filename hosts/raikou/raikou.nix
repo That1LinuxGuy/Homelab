@@ -44,6 +44,7 @@
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
+  home-manager.extraSpecialArgs = { inherit inputs; };
   home-manager.users.mcallen = import ./home.nix;
 
   # Configure keymap in X11
