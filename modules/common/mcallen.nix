@@ -8,7 +8,7 @@
   users.users."mcallen" = {
     isNormalUser = true;
     description = "mcallen";
-    extraGroups = [ "networkmanager" "wheel" "k3s" ];
+    extraGroups = [ "networkmanager" "wheel" "k3s" "scanner" "lp" ];
     linger = true;
     packages = with pkgs; [
       kdePackages.kate
