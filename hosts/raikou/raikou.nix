@@ -122,6 +122,7 @@
     # Not tools
     vesktop
     moonlight-qt
+    simple-scan
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
