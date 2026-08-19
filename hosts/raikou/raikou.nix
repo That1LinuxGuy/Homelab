@@ -15,7 +15,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   boot.initrd.luks.devices."luks-c0f2f237-921c-40ca-b7de-6a97be77a458".device = "/dev/disk/by-uuid/c0f2f237-921c-40ca-b7de-6a97be77a458";
-  networking.hostName = "tyranitar"; # Define your hostname.
+  networking.hostName = "raikou"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Enable flakes
