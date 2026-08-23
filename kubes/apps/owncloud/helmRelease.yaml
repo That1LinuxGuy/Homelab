@@ -49,43 +49,43 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-double
+          storageClassName: longhorn-triple
           size: 5Gi
       nats:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-double
+          storageClassName: longhorn-triple
           size: 5Gi
       search:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-double
+          storageClassName: longhorn-triple
           size: 5Gi
       storagesystem:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-double
+          storageClassName: longhorn-triple
           size: 5Gi
       ocm:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-double
+          storageClassName: longhorn-triple
           size: 5Gi
       storageusers:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-double
-          size: 500Gi
+          storageClassName: longhorn-triple
+          size: 400Gi
 
     monitoring:
       enabled: true
