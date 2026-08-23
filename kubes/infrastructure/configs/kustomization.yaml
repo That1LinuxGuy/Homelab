@@ -2,7 +2,6 @@ resources:
 #   - auth
   - cnpg
   - certs
-  - garage
   - longhorn
   - metal
   - prometheus
