@@ -40,6 +40,7 @@ spec:
             spec:
               accessModes:
                 - ReadWriteOnce
+              storageClassName: seaweedfs-csi
               resources:
                 requests:
                   storage: 50Gi
