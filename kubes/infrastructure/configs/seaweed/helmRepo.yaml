@@ -1,0 +1,17 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: seaweed
+  namespace: seaweed
+spec:
+  interval: 1h
+  url: https://seaweedfs.github.io/seaweedfs/helm
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: seaweedfs-csi-driver
+  namespace: seaweed
+spec:
+  interval: 1h
+  url: https://seaweedfs.github.io/seaweedfs-csi-driver/helm
