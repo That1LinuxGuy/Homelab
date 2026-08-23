@@ -10,3 +10,4 @@ resources:
   - tailscale.yaml
   - mariadb.yaml
   - redis.yaml
+  - seaweed.yaml
