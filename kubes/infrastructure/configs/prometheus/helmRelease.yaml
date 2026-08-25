@@ -37,10 +37,9 @@ spec:
         # Storage configuration
         storageSpec:
           volumeClaimTemplate:
-            spec:
+            spec: kube-prometheus-stack-seaweedfs
               accessModes:
                 - ReadWriteOnce
-              storageClassName: seaweedfs-csi
               resources:
                 requests:
                   storage: 50Gi
