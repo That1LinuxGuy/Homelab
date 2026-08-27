@@ -1,12 +1,14 @@
-{ inputs, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports = [
-    inputs.noctalia.homeManagerModules.default
-  ]:
-
+    inputs.noctalia.homeModules.default
+  ];
+  
   programs.noctalia = {
     enable = true;
     
   };
+  
 }
+
