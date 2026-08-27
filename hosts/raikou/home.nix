@@ -7,6 +7,7 @@
    ../home/vim.nix
    ../home/bash.nix
    ../home/ssh.nix
+   ../home/noctalia.nix
  ];
 
   home.username = "mcallen";
