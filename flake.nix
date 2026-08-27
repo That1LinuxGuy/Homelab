@@ -1,6 +1,11 @@
 {
   description = "Master flake to manage host machines configurations";
 
+  nixConfig = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+  };
+
   inputs = {
     # NixOS official package source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
@@ -16,8 +21,7 @@
 
     # Noctalia-shell flake
     noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "unstable";
+      url = "github:noctalia-dev/noctalia/cachix";
     }; 
   };
 
