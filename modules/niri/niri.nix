@@ -10,11 +10,9 @@
   programs.niri.enable = true;
   
   environment.systemPackages = with pkgs; [
-  inputs.noctalia.packages.${pkgs.system}.default
   xwayland-satellite
   alacritty
   fuzzel
-  mpvpaper
   swaylock
   nautilus
   brightnessctl
