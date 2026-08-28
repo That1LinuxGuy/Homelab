@@ -10,9 +10,6 @@
       ./hardware-pikachu.nix
     ];
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   boot.initrd.systemd.enable = true;
   boot.initrd.luks.devices."luks-aecb8201-43b8-40bd-912a-d40661b3ca26" = {
   device = "/dev/disk/by-uuid/aecb8201-43b8-40bd-912a-d40661b3ca26";
