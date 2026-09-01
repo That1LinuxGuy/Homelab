@@ -12,5 +12,6 @@
     ./common/kernel.nix
     ./niri/niri.nix
     ./packages/unstable.nix
+    ./packages/tools.nix
   ];
 }
