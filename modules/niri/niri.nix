@@ -12,7 +12,6 @@
   environment.systemPackages = with pkgs; [
   xwayland-satellite
   alacritty
-  kdePackages.dolphin
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
