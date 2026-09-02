@@ -12,10 +12,7 @@
   environment.systemPackages = with pkgs; [
   xwayland-satellite
   alacritty
-  fuzzel
-  swaylock
-  nautilus
-  brightnessctl
+  kdePackages.dolphin
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
