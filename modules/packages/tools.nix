@@ -8,5 +8,7 @@
   environment.systemPackages = with pkgs; [
     localsend
     converseen
+    kdePackages.gwenview
+    thunar
   ];
 }
