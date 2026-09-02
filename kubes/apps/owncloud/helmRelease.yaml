@@ -49,42 +49,42 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-triple
+          storageClassName: seaweedfs-storage
           size: 5Gi
       nats:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-triple
+          storageClassName: seaweedfs-storage
           size: 5Gi
       search:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-triple
+          storageClassName: seaweedfs-storage
           size: 5Gi
       storagesystem:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-triple
+          storageClassName: seaweedfs-storage
           size: 5Gi
       ocm:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-triple
+          storageClassName: seaweedfs-storage
           size: 5Gi
       storageusers:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: longhorn-triple
+          storageClassName: seaweedfs-storage
           size: 400Gi
 
     monitoring:
