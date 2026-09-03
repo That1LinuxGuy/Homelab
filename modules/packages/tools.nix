@@ -8,5 +8,6 @@
     photoqt
     switcheroo
     yazi
+    zoom-us
   ];
 }
