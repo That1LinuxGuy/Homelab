@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
   xwayland-satellite
   alacritty
+  brightnessctl
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
