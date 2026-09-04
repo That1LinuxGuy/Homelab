@@ -9,5 +9,6 @@
     switcheroo
     yazi
     zoom-us
+    mdcat
   ];
 }
