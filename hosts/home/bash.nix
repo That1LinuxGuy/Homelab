@@ -29,5 +29,15 @@
       "gcm" = "git commit -m";
       "gpu" = "git push -u origin";
     };
+
+    initExtra = ''
+    cat() {
+      if [[ $# -eq 1 && "$1" == *.md ]]; then
+        mdcat "$1"
+      else
+        command cat "$@"
+      fi
+    }
+  '';
   };
 }
