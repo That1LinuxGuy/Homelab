@@ -63,7 +63,8 @@
   services.power-profiles-daemon.enable = true;
   services.ollama = {
     enable = true;
-    loadModels = [ "gemma3:1b" ];
+    loadModels = [ "gemma3:4b" ];
+    package = pkgs.ollama-vulkan;
   };
 
   # Enable sound with pipewire.
@@ -87,7 +88,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."mcallen" = {
-    isNormalUser = true;
+    isNormalUser = tru4;
     description = "mcallen";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
