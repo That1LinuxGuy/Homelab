@@ -23,6 +23,7 @@
       "...."="cd ../../..";
       "ff" = "fastfetch";
       "cdh" = "cd ~/Projects/homelab";
+      "cdn" = "cd ~/Projects/notes";
 
       # git commands
       "ga" = "git add .";
