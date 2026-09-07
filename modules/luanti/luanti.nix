@@ -7,10 +7,8 @@
   luanti
   ];
 
-  {
-   services.minetest-server = {
-     enable = true;
-     port = 30000;
-   };
-  }
+  services.minetest-server = {
+    enable = true;
+    port = 30000;
+  };
 }
