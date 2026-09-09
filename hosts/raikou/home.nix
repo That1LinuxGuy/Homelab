@@ -8,6 +8,7 @@
    ../home/bash.nix
    ../home/ssh.nix
    ../home/noctalia.nix
+   ../home/pi.nix
  ];
 
   home.username = "mcallen";
