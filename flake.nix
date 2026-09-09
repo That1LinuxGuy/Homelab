@@ -13,6 +13,12 @@
     # NixOS unstable package source
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # llm-agents numatide
+    pi = {
+      url = "github:numtide/llm-agents.nix";
+      inputs.nixpkgs.follows = "unstable";
+    };
+
     # NixOS Home Manager
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
