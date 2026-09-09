@@ -3,10 +3,6 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-  luanti-server
-  ];
-
   services.minetest-server = {
     enable = true;
     port = 30000;
@@ -19,11 +15,11 @@
       
       package = pkgs.minetest-server.override {
         extraGames = [
-        # pkgs.minetestgames.mineclone2
-        pkgs.minetestgames.minetest_game
+          pkgs.minetestgames.mineclonia
+          pkgs.minetestgames.minetest_game
         ];
         extraMods = [
-        pkgs.minetestmods.mobs_monster
+        # pkgs.minetestmods.mobs_monster
         ];
       };
     };
