@@ -13,6 +13,7 @@
   xwayland-satellite
   alacritty
   brightnessctl
+  nautilus
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;
