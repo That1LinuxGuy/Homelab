@@ -61,11 +61,6 @@
   services.udisks2.enable = true;
   services.upower.enable = true;
   services.power-profiles-daemon.enable = true;
-  services.ollama = {
-    enable = true;
-    loadModels = [ "gemma3:4b" ];
-    package = pkgs.ollama-vulkan;
-  };
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -97,8 +92,6 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
