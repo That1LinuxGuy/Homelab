@@ -2,6 +2,6 @@
 
 {
   home.packages = [
-    inputs.pi.x86_64-linux.${pkgs.stdenv.hostPlatform.system}.pi
+    inputs.pi.packages.${pkgs.stdenv.hostPlatform.system}.pi
   ];
 }

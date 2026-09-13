@@ -14,6 +14,9 @@
   alacritty
   brightnessctl
   nautilus
+  adwaita-icon-theme
+  gnome-icon-theme
+  hicolor-icon-theme
   ];
 
   environment.etc."xdg/niri/config.kdl".source = ./config.kdl;

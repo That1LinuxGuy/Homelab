@@ -7,7 +7,6 @@
     opensc
     ccid
     pcsc-tools
-    nss
   ];
 
   # Enable pcsc daemon for CAC card reader
