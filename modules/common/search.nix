@@ -15,7 +15,7 @@
 
       search = {
         safe_search = 0;
-        autocomplete = "duckduckgo"
+        autocomplete = "duckduckgo";
         formats = [
           "html"
           "json"
@@ -23,8 +23,11 @@
       };
 
       engines = [
-        {name = "google"; disabled = false; }
-        {name = "duckduckgo"; disabled = false; }
+        { name = "qwant"; disabled = false; }
+        { name = "mojeek"; disabled = false; }
+        { name = "bing"; disabled = false; }
+        { name = "google"; disabled = false; }
+        { name = "duckduckgo"; disabled = false; }
       ];
     };
   };
