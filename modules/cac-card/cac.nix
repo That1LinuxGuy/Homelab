@@ -19,7 +19,7 @@
     # Enable opensc in firefox for CAC card use
     policies = {
       SecurityDevices = {
-        Add = {"CAC card" = "${pkgs.opensc}/lib/opensc-pkcs11.so"; };
+        Add = {"CAC card" = "/run/current-system/sw/lib/opensc-pkcs11.so"; };
       };
     };
   };
