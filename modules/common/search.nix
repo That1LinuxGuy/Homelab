@@ -30,15 +30,33 @@
 
       engines = [
         # Disabled
-        { name = "brave"; disabled = true; }
-        { name = "qwant"; disabled = true; }
+        { name = "duckduckgo"; disabled = true; }
         { name = "mojeek"; disabled = true; }
+        { name = "startpage"; disabled = true; }
+        { name = "qwant"; disabled = true; }
         
         # Enabled
+        { 
+          name = "brave"; 
+          engine = "braveapi";
+          api_key = "@BRAVE_API_KEY@";
+          disabled = false; 
+          weight = 2.0;
+        }
+        {
+          name = "github";
+          engine = "github";
+          api_key = "@GITHUB_TOKEN@";
+          disabled = false;
+        }
         { name = "mwmbl"; disabled = false; }
         { name = "bing"; disabled = false; }
-        { name = "google"; disabled = false; }
-        { name = "duckduckgo"; disabled = false; use_mobile_ui = true; }
+        { name = "google"; disabled = false; use_mobile_ui = true;}
+        { name = "wikidata"; disabled = false; }
+        { name = "ddg definitions"; disabled = false; weight = 2.0; }
+        { name = "wikibooks"; disabled = false; }
+        { name = "wikiversity"; disabled = false; weight = 0.5; }
+        { name = "wikivoyage"; disabled = false; weight = 0.5; }
       ];
     };
   };

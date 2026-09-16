@@ -10,8 +10,8 @@
 
     config = {
       server_name = "Allen Family";
-      creative_mode = false;
-      enable_damage = true;
+      creative_mode = true;
+      enable_damage = false;
     };
   };
 }
