@@ -16,11 +16,13 @@
       "-ngl" "99"
       "-t" "2"
       "-c" "16384"
-      "-fa" "on"
       "-ctk" "q8_0"
       "-ctv" "q8_0"
+      "-ub" "256"
+      "--jinja"
       "--models-dir" "/var/lib/models"
       "--reasoning-budget" "-1"
+      "--no-flash-attn"
     ];
   };
 }
