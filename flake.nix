@@ -32,6 +32,7 @@
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    
     nixosConfigurations = {
 
       # master node | pokedex 001
