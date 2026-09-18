@@ -1,28 +1,24 @@
-## llama.cpp Intel/SYCL router server for local GGUF models
+## llama.cpp with vulkan backend
 
-{ ... }:
+{ pkgs, inputs, ... }:
 
 {
-  virtualisation.oci-containers = {
-    backend = "podman";
-
-    containers.llama = {
-      image = "ghcr.io/ggml-org/llama.cpp:server-intel";
-      extraOptions = [
-        "--device=/dev/dri"
-        "--group-add=keep-groups"
-      ];
-      volumes = [ "/var/lib/models:/models:ro" ];
-      ports = [ "8080:8080" ];
-
-      cmd = [
-        "--host" "0.0.0.0"
-        "--port" "8080"
-        "--models-dir" "/models"
-        "--ctx-size" "16483"
-        "--n-gpu-layers" "999"
-        "-t" "4"
-      ];
+  services.llama-cpp = {
+    enable = true;
+    package = inputs.unstable.legacyPackages.${pkgs.system}.llama-cpp;
+    settings = {
+      host = 127.0.0.1;
+      port = 8080;
+      models-dir = "var/lib/models";
+      ctx-size = 8192;
+      n-gpu-layers = 999;
+      threads = 4;
+      cache-type-k = "q8_0";
+      cache-type-v = "q8_0";
     };
   };
 }
+
+
+
+

@@ -13,7 +13,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernalParams = [
+  boot.kernelParams = [
     "i915.force_probe=!7d45"
     "xe.force_probe=7d45"
   ];
