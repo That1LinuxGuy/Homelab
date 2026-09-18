@@ -1,4 +1,4 @@
-## llama.cpp OpenVINO OCI container
+## llama.cpp Intel/SYCL router server for local GGUF models
 
 { ... }:
 
@@ -6,27 +6,22 @@
   virtualisation.oci-containers = {
     backend = "podman";
 
-    containers.llama-openvino = {
-      image = "ghcr.io/ggml-org/llama.cpp:server-openvino";
-      extraOptions = [ "--device=/dev/dri" ];
+    containers.llama = {
+      image = "ghcr.io/ggml-org/llama.cpp:server-intel";
+      extraOptions = [
+        "--device=/dev/dri"
+        "--group-add=keep-groups"
+      ];
       volumes = [ "/var/lib/models:/models:ro" ];
       ports = [ "8080:8080" ];
-      environment = {
-        GGML_OPENVINO_DEVICE = "GPU";
-      };
+
       cmd = [
-        "--host" "127.0.0.1"
+        "--host" "0.0.0.0"
         "--port" "8080"
-        "-ngl" "999"
-        "-t" "4"
-        "-c" "32768"
-        "-ctk" "q8_0"
-        "-ctv" "q8_0"
-        "-b" "512"
-        "-ub" "64"
-        "--jinja"
         "--models-dir" "/models"
-        "--reasoning-budget" "-1"
+        "--ctx-size" "16483"
+        "--n-gpu-layers" "999"
+        "-t" "4"
       ];
     };
   };
