@@ -13,6 +13,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernalParams = [
+    "i915.force_probe=!7d45"
+    "xe.force_probe=7d45"
+  ];
 
   boot.initrd.luks.devices."luks-c0f2f237-921c-40ca-b7de-6a97be77a458".device = "/dev/disk/by-uuid/c0f2f237-921c-40ca-b7de-6a97be77a458";
   networking.hostName = "raikou"; # Define your hostname.
