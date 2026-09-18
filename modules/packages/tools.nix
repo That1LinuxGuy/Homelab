@@ -10,5 +10,8 @@
     yazi
     zoom-us
     mdcat
+
+    # Hugging Face
+    python313Packages.huggingface-hub
   ];
 }
