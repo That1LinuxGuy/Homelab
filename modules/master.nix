@@ -9,5 +9,6 @@
     ./common/network.nix
     ./common/kubernetes.nix
     ./k3s/k3s-master.nix
+    ./luanti/luanti-server.nix
   ];
 }
