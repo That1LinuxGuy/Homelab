@@ -51,21 +51,21 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: seaweedfs-storage
+          storageClassName: local-path
           size: 5Gi
       nats:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: seaweedfs-storage
+          storageClassName: local-path
           size: 5Gi
       search:
         persistence:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: seaweedfs-storage
+          storageClassName: local-path
           size: 5Gi
       storagesystem:
         persistence:
@@ -79,7 +79,7 @@ spec:
           enabled: true
           accessModes:
             - ReadWriteOnce
-          storageClassName: seaweedfs-storage
+          storageClassName: local-path
           size: 5Gi
       storageusers:
         persistence:
