@@ -6,5 +6,6 @@
   environment.systemPackages =  [
    inputs.unstable.legacyPackages.${pkgs.system}.newelle 
    inputs.unstable.legacyPackages.${pkgs.system}.libreoffice
+   inputs.unstable.legacyPackages.${pkgs.system}.llama-cpp-vulkan
   ];
 }

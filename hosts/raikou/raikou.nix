@@ -16,9 +16,16 @@
   boot.kernelParams = [
     "i915.force_probe=!7d45"
     "xe.force_probe=7d45"
+    "i915.request_timeout_ms=0"
   ];
 
   boot.initrd.luks.devices."luks-c0f2f237-921c-40ca-b7de-6a97be77a458".device = "/dev/disk/by-uuid/c0f2f237-921c-40ca-b7de-6a97be77a458";
+
+  # Keep the existing encrypted swap partition and add a 64 GiB swap file.
+  swapDevices = [
+    { device = "/swapfile"; size = 64 * 1024; }
+  ];
+
   networking.hostName = "raikou"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

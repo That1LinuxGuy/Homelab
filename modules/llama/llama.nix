@@ -1,24 +1,34 @@
-## llama.cpp with vulkan backend
+## OpenVINO Model Server with GPU support
 
-{ pkgs, inputs, ... }:
+{ ... }:
 
 {
-  services.llama-cpp = {
-    enable = true;
-    package = inputs.unstable.legacyPackages.${pkgs.system}.llama-cpp;
-    settings = {
-      host = 127.0.0.1;
-      port = 8080;
-      models-dir = "var/lib/models";
-      ctx-size = 8192;
-      n-gpu-layers = 999;
-      threads = 4;
-      cache-type-k = "q8_0";
-      cache-type-v = "q8_0";
+  virtualisation.oci-containers = {
+    backend = "podman";
+
+    containers.ovms = {
+      image = "openvino/model_server:latest-gpu";
+      extraOptions = [
+        "--device=/dev/dri"
+        "--group-add=keep-groups"
+      ];
+
+      environment = {
+        "OV_COMPILATION_NUM_THREADS" = "1";
+      };
+
+      volumes = [
+        "/var/lib/models/gemma:/models:ro"
+        "/var/lib/ovms:/cache"
+      ];
+      ports = [ "127.0.0.1:8080:8080" ];
+      cmd = [
+        "--model_path" "/models"
+        "--cache_dir" "/cache"
+        "--model_name" "gemma"
+        "--plugin_config" ''{"PERFORMANCE_HINT": "LATENCY"}''
+        "--port" "8080"
+      ];
     };
   };
 }
-
-
-
-
