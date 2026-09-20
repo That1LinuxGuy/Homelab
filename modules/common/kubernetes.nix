@@ -47,7 +47,7 @@
   ];
 
   networking.firewall = {
-    enablte = true;
+    enable = true;
     checkReversePath = "loose";
     trustedInterfaces = ["cni0" "flannel.1" ];
   };
