@@ -49,7 +49,7 @@
   networking.firewall = {
     enablte = true;
     checkReversePath = "loose";
-    trusted interfaces = ["cni0" "flannel.1" ];
+    trustedInterfaces = ["cni0" "flannel.1" ];
   };
 
   # Open ports in the firewall.
