@@ -81,6 +81,7 @@
           ./hosts/raikou/raikou.nix
           ./modules/laptop.nix
           ./modules/cac-card/cac.nix
+          ./modules/raikou.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };

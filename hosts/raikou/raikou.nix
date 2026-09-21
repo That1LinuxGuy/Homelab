@@ -23,7 +23,7 @@
 
   # Keep the existing encrypted swap partition and add a 64 GiB swap file.
   swapDevices = [
-    { device = "/swapfile"; size = 64 * 1024; }
+    { device = "/swapfile"; size = 24 * 1024; }
   ];
 
   networking.hostName = "raikou"; # Define your hostname.
