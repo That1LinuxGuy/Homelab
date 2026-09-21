@@ -10,10 +10,8 @@
     ./common/print.nix
     ./common/boot.nix
     ./common/kernel.nix
-    ./common/search.nix
     ./niri/niri.nix
     ./packages/unstable.nix
     ./packages/tools.nix
-    ./llama/llama.nix
   ];
 }

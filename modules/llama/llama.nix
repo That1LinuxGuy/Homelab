@@ -19,8 +19,8 @@
       };
 
       volumes = [
-        "/var/lib/models/gemma-gguf:/models:ro"
-        "/var/lib/models/gemma-gguf/cache:/cache"
+        "/var/lib/models/qwen:/models:ro"
+        "/var/lib/ovms-npu:/cache"
       ];
       ports = [
         "127.0.0.1:8080:8080" 
@@ -29,12 +29,11 @@
       cmd = [
         "--model_path" "/models"
         "--cache_dir" "/cache"
-        "--model_name" "gemma"
-        "--target_device" "GPU"
+        "--model_name" "qwen"
+        "--target_device" "NPU"
         "--port" "8080"
         "--rest_port" "9000"
-        "--task" "text_generation"
-        "--gguf_filename" "gemma-4-26B-A4B-it-UD-Q3_K_M.gguf"
+        "--max_prompt_len" "8192"
       ];
     };
   };

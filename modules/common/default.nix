@@ -40,15 +40,15 @@
   };
 
   # enable auto upgrades
-  system.autoUpgrade = {
-    enable = true;
-    flake = "github:That1LinuxGuy/Homelab";
-    flags = [
-      "--print-build-logs"
-    ];
-    dates = "daily";
-    randomizedDelaySec = "45min";
-  };
+#  system.autoUpgrade = {
+#    enable = true;
+#    flake = "github:That1LinuxGuy/Homelab";
+#    flags = [
+#      "--print-build-logs"
+#    ];
+#    dates = "daily";
+#    randomizedDelaySec = "45min";
+#  };
 
   # Enable Flakes feature and accompanying CLI tools
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
