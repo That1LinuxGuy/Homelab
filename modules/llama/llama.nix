@@ -19,8 +19,8 @@
       };
 
       volumes = [
-        "/var/lib/models/qwen:/models:ro"
-        "/var/lib/ovms-npu:/cache"
+        "/var/lib/models/gpt-oss:/models:ro"
+        "/var/lib/models/gpt-oss/cache:/cache"
       ];
       ports = [
         "127.0.0.1:8080:8080" 
@@ -29,11 +29,11 @@
       cmd = [
         "--model_path" "/models"
         "--cache_dir" "/cache"
-        "--model_name" "qwen"
-        "--target_device" "NPU"
+        "--model_name" "gpt-oss"
+        "--target_device" "GPU"
         "--port" "8080"
         "--rest_port" "9000"
-        "--max_prompt_len" "8192"
+        "--max_prompt_len" "16384"
       ];
     };
   };
