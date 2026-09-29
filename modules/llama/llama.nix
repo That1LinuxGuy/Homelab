@@ -33,7 +33,6 @@
         "--target_device" "GPU"
         "--port" "8080"
         "--rest_port" "9000"
-        "--max_prompt_len" "16384"
       ];
     };
   };
