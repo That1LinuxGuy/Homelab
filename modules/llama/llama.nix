@@ -19,8 +19,8 @@
       };
 
       volumes = [
-        "/var/lib/models/gpt-oss:/models:ro"
-        "/var/lib/models/gpt-oss/cache:/cache"
+        "/var/lib/models/gemmaE4B:/models:ro"
+        "/var/lib/gemmaE4B-cache:/cache"
       ];
       ports = [
         "127.0.0.1:8080:8080" 
@@ -29,7 +29,7 @@
       cmd = [
         "--model_path" "/models"
         "--cache_dir" "/cache"
-        "--model_name" "gpt-oss"
+        "--model_name" "gemma-4-e4b"
         "--target_device" "GPU"
         "--port" "8080"
         "--rest_port" "9000"
