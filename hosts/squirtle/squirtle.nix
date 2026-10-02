@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-squirtle.nix
+      ./hardware-configuration.nix
     ];
 
   networking.hostName = "squirtle"; # Define your hostname.
