@@ -34,8 +34,11 @@
 
   networking.hostName = "pikachu"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  home-manager.useGlobalPkgs = true;
-  home-manager.useUserPackages = true;
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+  };
   home-manager.users.mcallen = import ./home.nix;
 
   # Enable networking
@@ -87,20 +90,8 @@
   # Install firefox.
   programs.firefox = {
     enable = true;
-
-    # enable opensc in firefox for CAC card use
-    policies = {
-      SecurityDevices = {
-        Add = {"CAC card" = "${pkgs.opensc}/lib/opensc-pkcs11.so"; };
-      };
-    };
-  };
  
   environment.systemPackages = with pkgs; [
-    # CAC card tools
-    opensc
-    ccid
-    pcsc-tools
     # Server tools
     kubectl
     fluxcd
@@ -109,6 +100,7 @@
     hugo
     brave
     fractal
+    wget
     # Not tools
     vesktop
     moonlight-qt
