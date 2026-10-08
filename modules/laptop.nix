@@ -13,5 +13,7 @@
     ./niri/niri.nix
     ./packages/unstable.nix
     ./packages/tools.nix
+    ./common/search.nix
+    ./llama/llama.nix
   ];
 }
