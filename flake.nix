@@ -68,8 +68,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/pikachu/pikachu.nix
-          ./modules/laptop.nix
-          inputs.home-manager.nixosModules.home-manager
+          ./modules/school.nix
         ];
       };
  
