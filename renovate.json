@@ -11,15 +11,15 @@
   "prHourlyLimit": 2,
 
   "flux": {
-    "fileMatch": [
-      "(^|/)apps/.+\\.ya?ml$",
-      "(^|/)clusters/.+\\.ya?ml$",
-      "(^|/)infrastructure/.+\\.ya?ml$"
+    "managerFilePatterns": [
+      "/(^|/)apps/.+\\.ya?ml$/",
+      "/(^|/)clusters/.+\\.ya?ml$/",
+      "/(^|/)infrastructure/.+\\.ya?ml$/"
     ]
   },
   "helm-values": {
-    "fileMatch": [
-      "(^|/)helm-values/.+\\.ya?ml$"
+    "managerFilePatterns": [
+      "/(^|/)helm-values/.+\\.ya?ml$/"
     ]
   },
 
