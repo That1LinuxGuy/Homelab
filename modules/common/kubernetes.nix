@@ -34,6 +34,7 @@
     fluxcd
     yaml-language-server
     sops
+    opentofu
     age
     gnupg
     (wrapHelm kubernetes-helm {

@@ -13,6 +13,7 @@
         ensureDBOwnership = true;
       }
     ];
-    ensureDatabases = [ "django_db" ];
+    # ensureDBOwnership requires a database with the same name as the user.
+    ensureDatabases = [ "mcallen" ];
   };
 }
