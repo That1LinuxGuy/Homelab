@@ -19,8 +19,8 @@
       };
 
       volumes = [
-        "/var/lib/models/gemmaE4B:/models:ro"
-        "/var/lib/gemmaE4B-cache:/cache"
+        "/var/lib/models/qwen3.5-9b:/models:ro"
+        "/var/lib/cache/qwen3.5-9b:/cache"
       ];
       ports = [
         "127.0.0.1:8080:8080" 
@@ -29,7 +29,7 @@
       cmd = [
         "--model_path" "/models"
         "--cache_dir" "/cache"
-        "--model_name" "gemma-4-e4b"
+        "--model_name" "qwen3.5-9b"
         "--target_device" "GPU"
         "--port" "8080"
         "--rest_port" "9000"
