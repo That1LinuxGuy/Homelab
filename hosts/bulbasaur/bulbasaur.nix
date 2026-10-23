@@ -3,7 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-bulbasaur.nix
+      ./hardware-configuration.nix
     ];
 
   networking.hostName = "bulbasaur"; # Define your hostname.
