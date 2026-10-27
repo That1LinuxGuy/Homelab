@@ -6,7 +6,6 @@
     ./vim.nix
     ./bash.nix
     ./ssh.nix
-    ./noctalia.nix
     ./pi.nix
  ];
 
