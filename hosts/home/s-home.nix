@@ -3,7 +3,7 @@
   # home manager config for shelby user
 {
   imports = [
-    desktop.nix
+    ./desktop.nix
   ];
 
   home.username = "shelby";

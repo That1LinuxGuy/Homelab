@@ -58,7 +58,9 @@
     useUserPackages = true;
     extraSpecialArgs = { inherit inputs; };
   };
-  home-manager.users.mcallen = import ./home.nix;
+  home-manager.users = {
+    mcallen = import ../home/m-home.nix;
+    shelby = import ../home/s-home.nix;
 
   # Configure keymap in X11
   services.xserver.xkb = {
