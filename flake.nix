@@ -41,6 +41,7 @@
         modules = [
           ./hosts/bulbasaur/bulbasaur.nix
           ./modules/master.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
 
@@ -50,6 +51,7 @@
         modules = [
           ./hosts/squirtle/squirtle.nix
           ./modules/server.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
 
@@ -59,6 +61,7 @@
         modules = [
           ./hosts/charmander/charmander.nix
           ./modules/server.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
 
@@ -69,6 +72,7 @@
         modules = [
           ./hosts/pikachu/pikachu.nix
           ./modules/school.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
  
@@ -92,6 +96,7 @@
         modules = [
           ./hosts/eevee/eevee.nix
           ./modules/school.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
       
@@ -102,6 +107,7 @@
         modules = [
           ./hosts/vaporeon/vaporeon.nix
           ./modules/school.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
 
@@ -112,6 +118,7 @@
         modules = [
           ./hosts/jolteon/jolteon.nix
           ./modules/school.nix
+          inputs.home-manager.nixosModules.home-manager
         ];
       };
     };
