@@ -1,4 +1,4 @@
-{ pkgs, config, inputs, ... }:
+{ pkgs, ... }:
 
 # sddm login manager configuration
 
@@ -10,7 +10,7 @@
       compositor = "kwin";
     };
   
-    theme = "sddm-astronaut-theme";
+    theme = "breeze";
     settings = {
       Theme= {
         CursorTheme = "Bibata-Modern-Ice";
@@ -18,13 +18,12 @@
       };
     };
     extraPackages = with pkgs; [
-      sddm-astronaut
+      kdePackages.plasma-desktop
       bibata-cursors
     ];
   };
 
   environment.systemPackages = with pkgs; [
-    sddm-astronaut
     bibata-cursors
   ];
 }
