@@ -61,6 +61,15 @@
     ];
   };
 
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = {
+      mcallen = import ../home/m-home.nix;
+      shelby = import ../home/s-home.nix;
+    };
+  };
+
   # Install firefox.
   programs.firefox.enable = true;
 
