@@ -11,7 +11,16 @@
       ../../modules/school.nix
     ];
 
-    security.pki.certificateFiles = [ ./dod-roots.pem];
+    security.pki.certificateFiles = [ 
+    ../home/Certificates_PKCS7_v5.6_DoD/DoD_Root_CAs.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/DoD_PKE_CA_chain.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-pem.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-der.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca2.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca3.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca4.pem
+    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca5.pem
+  ];
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
