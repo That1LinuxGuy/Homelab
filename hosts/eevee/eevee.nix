@@ -11,15 +11,13 @@
       ../../modules/school.nix
     ];
 
+    security.pki.certificateFiles = [ ./dod-roots.pem];
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
   networking.hostName = "eevee"; # Define your hostname.
 
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
   hardware.bluetooth.enable = true;
 
   # Configure keymap in X11
