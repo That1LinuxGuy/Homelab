@@ -9,6 +9,7 @@
     settings = {
       "github.com" = {
         user = "mcallen"; 
+        identityFile = "~/.ssh/school"
       };
 
       "*.spangled-vibes.ts.net" = {
