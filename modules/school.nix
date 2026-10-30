@@ -9,9 +9,9 @@
     ./common/network.nix
     ./common/print.nix
     ./common/boot.nix
-    ./sddm/sddm.nix
-    # ./plasma/plasma.nix
+    ./plasma/plasma.nix
     ./packages/school.nix
     ./luanti/luanti.nix
+    ./cac-card/cac.nix
   ];
 }
