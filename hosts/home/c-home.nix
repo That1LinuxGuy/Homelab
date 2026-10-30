@@ -1,12 +1,12 @@
 { config, pkgs, inputs, ... }:
 
-  # home manager config for james user
+  # home manager config for charlotte user
 {
   imports = [
     ./desktop.nix
   ];
 
-  home.username = "james";
-  home.homeDirectory = "/home/james";
+  home.username = "charlotte";
+  home.homeDirectory = "/home/charlotte";
   home.stateVersion = "26.05";
 }
