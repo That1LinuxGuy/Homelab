@@ -6,7 +6,7 @@
   ];
 
   # Remember to set a password
-  users.users. = {
+  users.users = {
     "mcallen" = {
       isNormalUser = true;
       description = "mcallen";
@@ -45,7 +45,7 @@
       mcallen = import ./m-home.nix;
       shelby = import ./s-home.nix;
       charlotte = import ./c-home.nix;
-      james = import ./j-home.nix
+      james = import ./j-home.nix;
     };
   };
 }
