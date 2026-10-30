@@ -1,0 +1,31 @@
+# Copy to terraform.tfvars and replace the node names, storage IDs and ISO file IDs.
+# Upload an installer ISO to each node's ISO-capable storage first, or use
+# shared storage accessible by all three nodes. ISO file IDs look like
+# "local:iso/ubuntu-24.04.3-live-server-amd64.iso" (use your actual filename).
+# vm_id values must be unique across the whole Proxmox cluster.
+vms = {
+  vm-01 = {
+    node_name         = "hp-prodesk" 
+    vm_id             = 101
+    disk_datastore_id = "pool1"
+    disk_size_gb      = 128
+    iso_file_id       = "local:iso/REPLACE-WITH-YOUR-INSTALLER.iso"
+    bridge            = "vmbr0"
+  }
+  vm-02 = {
+    node_name         = "proxmox-chromebox"
+    vm_id             = 102
+    disk_datastore_id = "local-lvm"
+    disk_size_gb      = 128
+    iso_file_id       = "local:iso/REPLACE-WITH-YOUR-INSTALLER.iso"
+    bridge            = "vmbr0"
+  }
+  vm-03 = {
+    node_name         = "proxmox-latitude"
+    vm_id             = 103
+    disk_datastore_id = "pool1"
+    disk_size_gb      = 128
+    iso_file_id       = "local:iso/REPLACE-WITH-YOUR-INSTALLER.iso"
+    bridge            = "vmbr0"
+  }
+}
