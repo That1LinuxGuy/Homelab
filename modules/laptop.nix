@@ -12,7 +12,6 @@
     ./common/kernel.nix
     ./packages/unstable.nix
     ./packages/tools.nix
-    ./common/search.nix
-#    ./llama/llama.nix
+    ./plasma/plasma.nix
   ];
 }
