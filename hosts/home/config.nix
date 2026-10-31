@@ -3,7 +3,6 @@
 {
   imports = [
     inputs.home-manager.nixosModules.home-manager
-    ./Certificates/dod-certs.pem
   ];
 
   # Remember to set a password

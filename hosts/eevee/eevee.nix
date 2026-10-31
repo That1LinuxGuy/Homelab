@@ -8,19 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/school.nix
+      ../home/config.nix
     ];
 
-    security.pki.certificateFiles = [ 
-    ../home/Certificates_PKCS7_v5.6_DoD/DoD_Root_CAs.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/DoD_PKE_CA_chain.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-pem.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-der.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca2.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca3.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca4.pem
-    ../home/Certificates_PKCS7_v5.6_DoD/dod-bundle-ca5.pem
-  ];
+    security.pki.certificateFiles = [
+      ../home/Certificates/dod-certs.pem
+    ];
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -55,28 +48,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."shelby" = {
-    isNormalUser = true;
-    description = "shelby";
-    extraGroups = [  "networkmanager" "wheel" "input" "scanner" "lp" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      google-chrome
-    #  thunderbird
-    ];
-  };
-
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      mcallen = import ../home/m-home.nix;
-      shelby = import ../home/s-home.nix;
-    };
-  };
 
   # Install firefox.
   programs.firefox.enable = true;
