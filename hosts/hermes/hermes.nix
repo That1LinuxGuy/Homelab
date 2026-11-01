@@ -43,6 +43,14 @@
     HandleLidSwitchDocked = "ignore";
   };
 
+  services.hermes-agent = {
+    enable = true;
+    settings = {
+    };
+    configFile = /etc/hermes/config.yaml;
+    addToSystemPackages = true;
+  };
+
   # Set your time zone.
   time.timeZone = "America/Chicago";
 
