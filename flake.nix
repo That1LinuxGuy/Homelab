@@ -14,6 +14,8 @@
       inputs.nixpkgs.follows = "unstable";
     };
 
+    hermes-agent.url = "github:NousResearch/hermes-agent";
+
     # NixOS Home Manager
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -107,6 +109,18 @@
           inputs.home-manager.nixosModules.home-manager
         ];
       };
+
+      # LLM machine | need a pokemon name
+      hermes = nixpkgs.lib.nixosSystem { 
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/hermes/hermes.nix
+        #   ./modules/llama/llama.nix
+          hermes-agent.nixosModules.default
+        ];
+      };
+      
     };
 
     homeConfigurations = {
