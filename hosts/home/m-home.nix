@@ -7,6 +7,7 @@
     ./bash.nix
     ./ssh.nix
     ./pi.nix
+    ./fonts.nix
  ];
 
   home.username = "mcallen";
