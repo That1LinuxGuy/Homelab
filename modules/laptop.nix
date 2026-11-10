@@ -10,6 +10,7 @@
     ./common/print.nix
     ./common/boot.nix
     ./common/kernel.nix
+    ./games/steam.nix
     ./packages/unstable.nix
     ./packages/tools.nix
     ./plasma/plasma.nix
