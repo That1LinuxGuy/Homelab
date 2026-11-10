@@ -13,6 +13,7 @@
     ./games/steam.nix
     ./packages/unstable.nix
     ./packages/tools.nix
+    ./packages/emu.nix
     ./plasma/plasma.nix
   ];
 }
