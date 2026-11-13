@@ -117,7 +117,7 @@
         modules = [
           ./hosts/hermes/hermes.nix
         #   ./modules/llama/llama.nix
-          hermes-agent.nixosModules.default
+          inputs.hermes-agent.nixosModules.default
         ];
       };
       

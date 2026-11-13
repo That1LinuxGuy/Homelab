@@ -9,7 +9,7 @@
     ./common/network.nix
     ./common/print.nix
     ./common/boot.nix
-    ./plasma/plasma.nix
+    ./cosmic/cosmic.nix
     ./packages/school.nix
     ./luanti/luanti.nix
     ./cac-card/cac.nix
