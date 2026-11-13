@@ -16,7 +16,7 @@
       ];
 
       volumes = [
-        "/var/lib/models/stable-diffusion:/models:ro"
+        "/var/lib/models/flux:/models:ro"
       ];
       ports = [ "127.0.0.1:1234:1234" ];
       cmd = [

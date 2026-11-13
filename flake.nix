@@ -118,11 +118,7 @@
         modules = [
           ./hosts/hermes/hermes.nix
         #   ./modules/llama/llama.nix
-<<<<<<< Updated upstream
-          inputs.hermes-agent.nixosModules.default
-=======
         inputs.hermes-agent.nixosModules.default
->>>>>>> Stashed changes
         ];
       };
       
