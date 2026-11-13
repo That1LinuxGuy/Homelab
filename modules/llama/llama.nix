@@ -1,4 +1,4 @@
-## OpenVINO Model Server with GPU support
+## stable-diffusion.cpp image generation server with Vulkan GPU support
 
 { ... }:
 
@@ -6,33 +6,23 @@
   virtualisation.oci-containers = {
     backend = "podman";
 
-    containers.ovms = {
-      image = "openvino/model_server:latest-gpu";
+    containers.stable-diffusion = {
+      image = "ghcr.io/leejet/stable-diffusion.cpp:master-vulkan";
       extraOptions = [
         "--device=/dev/dri"
-        "--device=/dev/accel"
         "--group-add=keep-groups"
+        "--init"
+        "--entrypoint=/sd-server"
       ];
-
-      environment = {
-        "OV_COMPILATION_NUM_THREADS" = "1";
-      };
 
       volumes = [
-        "/var/lib/models/qwen3.5-9b:/models:ro"
-        "/var/lib/cache/qwen3.5-9b:/cache"
+        "/var/lib/models/stable-diffusion:/models:ro"
       ];
-      ports = [
-        "127.0.0.1:8080:8080" 
-        "127.0.0.1:9000:9000"
-      ];
+      ports = [ "127.0.0.1:1234:1234" ];
       cmd = [
-        "--model_path" "/models"
-        "--cache_dir" "/cache"
-        "--model_name" "qwen3.5-9b"
-        "--target_device" "GPU"
-        "--port" "8080"
-        "--rest_port" "9000"
+        "--model-dir" "/models"
+        "--listen-ip" "0.0.0.0"
+        "--listen-port" "1234"
       ];
     };
   };

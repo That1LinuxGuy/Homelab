@@ -5,6 +5,6 @@
 {
   environment.systemPackages = with pkgs; [
     retroarch-free
-    pcxs2
+    pcsx2
   ];
 }

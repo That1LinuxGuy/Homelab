@@ -14,6 +14,10 @@
     ./packages/unstable.nix
     ./packages/tools.nix
     ./packages/emu.nix
+<<<<<<< HEAD
+=======
+    # ./plasma/plasma.nix
+>>>>>>> 60881d0 (add stable-diffusion)
     ./cosmic/cosmic.nix
   ];
 }
