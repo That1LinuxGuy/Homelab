@@ -64,6 +64,11 @@
     shelby = import ../home/s-home.nix;
   };
 
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";

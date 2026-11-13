@@ -73,6 +73,7 @@
           ./hosts/raikou/raikou.nix
           ./modules/laptop.nix
           ./modules/cac-card/cac.nix
+          ./module/llama/llama.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };
@@ -117,7 +118,11 @@
         modules = [
           ./hosts/hermes/hermes.nix
         #   ./modules/llama/llama.nix
+<<<<<<< Updated upstream
           inputs.hermes-agent.nixosModules.default
+=======
+        inputs.hermes-agent.nixosModules.default
+>>>>>>> Stashed changes
         ];
       };
       
