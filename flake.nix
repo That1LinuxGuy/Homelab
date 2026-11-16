@@ -8,6 +8,8 @@
     # NixOS unstable package source
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+
     # llm-agents numatide
     pi = {
       url = "github:numtide/llm-agents.nix";
@@ -75,6 +77,7 @@
           ./modules/cac-card/cac.nix
           ./module/llama/llama.nix
           inputs.home-manager.nixosModules.home-manager
+          inputs.determinate.nixosModules.default
         ];
       };
 
