@@ -118,11 +118,7 @@
         modules = [
           ./hosts/hermes/hermes.nix
         #   ./modules/llama/llama.nix
-<<<<<<< HEAD
         inputs.hermes-agent.nixosModules.default
-=======
-          inputs.hermes-agent.nixosModules.default
->>>>>>> ca5ec6b (updates)
         ];
       };
       

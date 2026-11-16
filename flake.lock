@@ -81,28 +81,17 @@
         "flake-parts": "flake-parts",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-<<<<<<< HEAD
-=======
         "npm-lockfile-fix": "npm-lockfile-fix",
->>>>>>> ca5ec6b (updates)
         "pyproject-build-systems": "pyproject-build-systems",
         "pyproject-nix": "pyproject-nix",
         "uv2nix": "uv2nix"
       },
       "locked": {
-<<<<<<< HEAD
         "lastModified": 1794532359,
         "narHash": "sha256-/1zYlm8yY2/2SciSc4a+qtCqWuMq3JgiD0tha8RsX/s=",
         "owner": "NousResearch",
         "repo": "hermes-agent",
         "rev": "c9b20d7bc08dec1e10779a06d7d9073bc6e7e418",
-=======
-        "lastModified": 1793635052,
-        "narHash": "sha256-3/hZY92jAugOg1z+p9Avk5QMqs3HigOxjmZc7ZYwgVU=",
-        "owner": "NousResearch",
-        "repo": "hermes-agent",
-        "rev": "f0d94882e89ab8d4098b5bb2f166adfb9ee0a0ab",
->>>>>>> ca5ec6b (updates)
         "type": "github"
       },
       "original": {
