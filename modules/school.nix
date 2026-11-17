@@ -11,7 +11,6 @@
     ./common/boot.nix
     ./cosmic/cosmic.nix
     ./packages/school.nix
-    ./luanti/luanti.nix
     ./cac-card/cac.nix
   ];
 }
