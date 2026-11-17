@@ -88,6 +88,7 @@
         modules = [
           ./hosts/eevee/eevee.nix
           ./modules/school.nix
+          ./modules/games/steam.nix
           inputs.home-manager.nixosModules.home-manager
         ];
       };
