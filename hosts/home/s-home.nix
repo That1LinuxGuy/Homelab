@@ -2,9 +2,7 @@
 
   # home manager config for shelby user
 {
-  imports = [
-    ./desktop.nix
-  ];
+  imports = [ ];
 
   home.username = "shelby";
   home.homeDirectory = "/home/shelby";

@@ -2,9 +2,7 @@
 
   # home manager config for charlotte user
 {
-  imports = [
-    ./desktop.nix
-  ];
+  imports = [ ];
 
   home.username = "charlotte";
   home.homeDirectory = "/home/charlotte";
