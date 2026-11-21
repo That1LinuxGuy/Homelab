@@ -37,7 +37,6 @@
     luanti
 
     # dev tools
-    vim
     wget
     hugo
     kubectl

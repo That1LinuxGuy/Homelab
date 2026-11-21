@@ -12,19 +12,22 @@
       google-chrome
     ];
 
+  home.file = {
+    ".local/share/icons/hicolor/96x96/apps/youtube-music.png".source = ../../images/youtube-music.png;
+    ".local/share/icons/hicolor/256x256/apps/chatgpt.png".source = ../../images/chatgpt.png;
+  };
+
   xdg.desktopEntries.youtube-music = {
     name = "YouTube Music";
-    exec = "${pkgs.chrome}/bin/chromium --app=https://music.youtube.com";
-    icon = "../../images/youtube-music.png";
+    exec = "${pkgs.google-chrome}/bin/google-chrome-stable --app=https://music.youtube.com";
+    icon = "youtube-music";
     terminal = false;
-    categories = [ "Audio" "Music" ];
   };
 
   xdg.desktopEntries.chatgpt = {
     name = "ChatGPT";
-    exec = "${pkgs.chrome}/bin/chromium --app=https://chatgpt.com";
-    icon = "../../images/chatgpt.png";
+    exec = "${pkgs.google-chrome}/bin/google-chomre-stable--app=https://chatgpt.com";
+    icon = "chatgpt";
     terminal = false;
-    categories = [ "Developemt" "Utilities" ];
   };
 }
