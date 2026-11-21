@@ -11,6 +11,7 @@
       isNormalUser = true;
       description = "mcallen";
       extraGroups = [ "networkmanager" "wheel" "k3s" "ipnut" "scanner" "lp" ];
+      linger = true;
     };
     "shelby" = {
       isNormalUser = true;
