@@ -5,12 +5,11 @@
 {
   imports = [
     ./common/default.nix
-    ./common/mcallen.nix
     ./common/network.nix
     ./common/print.nix
+    ./common/kernel.nix
     ./common/boot.nix
     ./cosmic/cosmic.nix
-    ./packages/school.nix
     ./cac-card/cac.nix
   ];
 }

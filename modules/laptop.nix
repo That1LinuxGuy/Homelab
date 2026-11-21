@@ -5,15 +5,11 @@
 {
   imports = [
     ./common/default.nix
-    ./common/mcallen.nix
     ./common/network.nix
     ./common/print.nix
     ./common/boot.nix
     ./common/kernel.nix
-    ./games/steam.nix
     ./packages/unstable.nix
-    ./packages/tools.nix
-    ./packages/emu.nix
     ./cosmic/cosmic.nix
   ];
 }
