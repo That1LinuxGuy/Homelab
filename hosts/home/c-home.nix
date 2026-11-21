@@ -8,7 +8,7 @@
   home.homeDirectory = "/home/charlotte";
   home.stateVersion = "26.05";
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     brave
     libreoffice
     tuxpaint

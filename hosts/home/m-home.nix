@@ -18,7 +18,7 @@
     FLAKE = "$HOME/Projects/homelab";
   }; 
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
     newelle
     localsend
     brave

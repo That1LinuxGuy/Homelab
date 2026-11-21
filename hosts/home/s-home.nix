@@ -8,7 +8,7 @@
   home.homeDirectory = "/home/shelby";
   home.stateVersion = "26.05";
 
-  packages = with pkgs; [
+  home.packages = with pkgs; [
       google-chrome
     ];
 

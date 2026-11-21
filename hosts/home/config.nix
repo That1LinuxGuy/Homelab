@@ -17,10 +17,6 @@
       isNormalUser = true;
       description = "shelby";
       extraGroups = [  "networkmanager" "wheel" "input" "scanner" "lp" ];
-      packages = with pkgs; [
-        google-chrome
-      #  thunderbird
-      ];
     };
     "charlotte" = {
       isNormalUser = true;
