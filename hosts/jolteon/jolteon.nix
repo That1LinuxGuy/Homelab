@@ -8,29 +8,29 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/school.nix
+      ../home/config.nix
     ];
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
   networking.hostName = "jolteon"; # Define your hostname.
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager = {
-    sddm.enable = true;
-    autoLogin = {
-      enable = true;
-      user = "james";
-    };
-  };
-  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
+
+   home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
+  };
+
+  services.power-profiles-daemon.enable = true;
+  services.tailscale.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -50,19 +50,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."james" = {
-    isNormalUser = true;
-    description = "James";
-    extraGroups = [];
-    packages = with pkgs; [
-      kdePackages.kate
-      libreoffice
-      brave
-    #  thunderbird
-    ];
-  };
 
   # Install firefox.
   programs.firefox.enable = true;
