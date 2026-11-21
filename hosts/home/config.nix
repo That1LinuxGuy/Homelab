@@ -10,7 +10,7 @@
     "mcallen" = {
       isNormalUser = true;
       description = "mcallen";
-      extraGroups = [ "networkmanager" "wheel" "k3s" "scanner" "lp" ];
+      extraGroups = [ "networkmanager" "wheel" "k3s" "ipnut" "scanner" "lp" ];
     };
     "shelby" = {
       isNormalUser = true;
@@ -34,7 +34,6 @@
   };
 
   users.groups.k3s = {};
-
 
   home-manager = {
     useGlobalPkgs = true;
