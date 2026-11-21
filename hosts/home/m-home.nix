@@ -19,12 +19,12 @@
   }; 
 
   packages = with pkgs; [
-    vim
     newelle
     localsend
     brave
-    kdePackages.skanpage
+    simple-scan
     zoom-us
+    vesktop
 
     # photos
     switcheroo
@@ -36,7 +36,13 @@
     pcsx2
     luanti
 
-    # Hugging Face
+    # dev tools
+    vim
+    wget
+    hugo
+    kubectl
+    fluxcd
+    terraform
     python313Packages.huggingface-hub
   ];
 
