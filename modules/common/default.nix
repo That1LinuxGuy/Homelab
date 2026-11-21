@@ -53,6 +53,21 @@
   # Enable Flakes feature and accompanying CLI tools
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  programs.steam = {
+    enable = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+  };
+
+  programs.gamemode.enable = true;
+  programs.gamescope = {
+    enable = true;
+    capSysNice = false;
+  };
+
+  users.users.mcallen.extraGroups = [ "gamemode" ];
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
