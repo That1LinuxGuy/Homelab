@@ -54,16 +54,6 @@
     LIBVA_DRIVER_NAME = "iHD";
   };
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
-  };
-  home-manager.users = {
-    mcallen = import ../home/m-home.nix;
-    shelby = import ../home/s-home.nix;
-  };
-
   programs.appimage = {
     enable = true;
     binfmt = true;

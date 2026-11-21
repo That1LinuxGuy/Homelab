@@ -23,12 +23,6 @@
     variant = "";
   };
 
-   home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    extraSpecialArgs = { inherit inputs; };
-  };
-
   services.power-profiles-daemon.enable = true;
   services.tailscale.enable = true;
 

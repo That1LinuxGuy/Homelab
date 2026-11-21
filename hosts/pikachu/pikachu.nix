@@ -47,18 +47,6 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."shelby" = {
-    isNormalUser = true;
-    description = "shelby";
-    extraGroups = [  "networkmanager" "wheel" "input" "scanner" "lp" ];
-    packages = with pkgs; [
-      kdePackages.kate
-      google-chrome
-    #  thunderbird
-    ];
-  };
-
   # Install firefox.
   programs.firefox.enable = true;
 
