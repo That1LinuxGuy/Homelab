@@ -53,10 +53,6 @@
   # Enable Flakes feature and accompanying CLI tools
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2a5f0e2 (add steam system wide)
   programs.steam = {
     enable = true;
     extraCompatPackages = with pkgs; [
@@ -64,11 +60,6 @@
     ];
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> 04f2233 (update steam location)
-=======
->>>>>>> 2a5f0e2 (add steam system wide)
   programs.gamemode.enable = true;
   programs.gamescope = {
     enable = true;
