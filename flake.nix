@@ -75,7 +75,7 @@
           ./hosts/raikou/raikou.nix
           ./modules/laptop.nix
           ./modules/cac-card/cac.nix
-          ./module/llama/llama.nix
+          ./modules/llama/llama.nix
           inputs.home-manager.nixosModules.home-manager
           inputs.determinate.nixosModules.default
         ];
