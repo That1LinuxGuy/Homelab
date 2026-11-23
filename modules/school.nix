@@ -10,6 +10,11 @@
     ./common/kernel.nix
     ./common/boot.nix
     ./cosmic/cosmic.nix
+<<<<<<< HEAD
+=======
+    ./packages/school.nix
+    ./games/luanti.nix
+>>>>>>> 1de3cf3 (module fixes)
     ./cac-card/cac.nix
   ];
 }
