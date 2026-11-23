@@ -18,7 +18,17 @@
     FLAKE = "$HOME/Projects/homelab";
   }; 
 
+<<<<<<< HEAD
   home.packages = with pkgs; [
+=======
+  packages = with pkgs; [
+    # Windows VM stuff
+    quickemu
+    spice-gtk
+    virt--viewer
+
+    # Basics
+>>>>>>> a69c8fd (add virt stuff to m-home)
     newelle
     localsend
     brave
