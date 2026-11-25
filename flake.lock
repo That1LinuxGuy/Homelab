@@ -275,6 +275,41 @@
         "type": "github"
       }
     },
+    "inferzero": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1795472013,
+        "narHash": "sha256-NncilOqeQyYfZtIoZCQ86FMMTeZGkxB3Qh6gqmwWBa0=",
+        "owner": "rizagp",
+        "repo": "inferzero",
+        "rev": "d29bddeb0e7937d4f38b167d3036bf68d840d863",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rizagp",
+        "repo": "inferzero",
+        "type": "github"
+      }
+    },
+    "inferzero-nix": {
+      "inputs": {
+        "inferzero": "inferzero",
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1795482633,
+        "narHash": "sha256-4NJL1mEjHW5rErc0ESAICDEgfo2Dxe9pD00ZcT/VqGE=",
+        "owner": "That1LinuxGuy",
+        "repo": "inferzero-nix",
+        "rev": "58d15365fadb6559a308163f413017c1ec617f38",
+        "type": "github"
+      },
+      "original": {
+        "owner": "That1LinuxGuy",
+        "repo": "inferzero-nix",
+        "type": "github"
+      }
+    },
     "nix": {
       "inputs": {
         "bdwgc": "bdwgc",
@@ -374,6 +409,22 @@
       }
     },
     "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1795234589,
+        "narHash": "sha256-f/VVvxf5RsQgWVhUtefoca5ktVg0DA2bnkMOcmSnozo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2786a2a72088ecf32aea5b3ec52099e6a7cff78f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1793015021,
         "narHash": "sha256-Ee5BWo8sh3pGt70QUdRajnaginqFmWvrtdBc4gJzhks=",
@@ -489,7 +540,8 @@
         "determinate": "determinate",
         "hermes-agent": "hermes-agent",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_4",
+        "inferzero-nix": "inferzero-nix",
+        "nixpkgs": "nixpkgs_5",
         "pi": "pi",
         "unstable": "unstable"
       }

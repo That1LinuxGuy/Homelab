@@ -9,7 +9,6 @@
     ./common/print.nix
     ./common/boot.nix
     ./common/kernel.nix
-    ./games/steam.nix
     ./games/luanti.nix
     ./packages/unstable.nix
     ./cosmic/cosmic.nix

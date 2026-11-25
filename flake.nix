@@ -18,6 +18,8 @@
 
     hermes-agent.url = "github:NousResearch/hermes-agent";
 
+    inferzero-nix.url = "github:That1LinuxGuy/inferzero-nix";
+
     # NixOS Home Manager
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
