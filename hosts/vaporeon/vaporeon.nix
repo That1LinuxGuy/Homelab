@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../home/config.nix
     ];
 
   # Enable the X11 windowing system.
@@ -15,15 +16,6 @@
   services.xserver.enable = true;
   networking.hostName = "vaporeon"; # Define your hostname.
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager = {
-    sddm.enable = true;
-    autoLogin = {
-      enable = true;
-      user = "charlotte";
-    };
-  };
-  services.desktopManager.plasma6.enable = true;
   hardware.bluetooth = {
     enable = true;
   };
@@ -52,16 +44,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users."charlotte" = {
-    isNormalUser = true;
-    description = "charlotte";
-    extraGroups = [ "input" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
-  };
 
   # Install firefox.
   programs.firefox.enable = true;
